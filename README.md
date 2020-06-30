@@ -41,6 +41,11 @@ javac -version
 
 #Instalando o eclipse
 
+baixar no site 
+https://www.eclipse.org/downloads/
+
+Copie de downloads para onde deseja; No meu caso foi:
+
 chmod +x '/home/hussyvel/Documents/eclipse-inst-linux64.tar.gz' 
 
 tar -vzxf '/home/hussyvel/Documents/eclipse-inst-linux64.tar.gz' 
