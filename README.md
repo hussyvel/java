@@ -19,15 +19,13 @@ sudo apt-get install default-jre
 #Versão default Jdk:
 sudo apt-get install default-jdk
 
-#Para instalar qualquer versão ou versão específica antes faça isto:
 
-sudo apt-get install python-software-properties
-sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 
 #Instalando o Java 8:
 
-sudo apt-get install oracle-java8-installer
+sudo apt install openjdk-8-jdk
+
 
 
 #Gerenciando versões do Java:
@@ -39,3 +37,13 @@ java -version
 
 #Testando o compilador Java:
 javac -version
+
+
+#Instalando o eclipse
+
+chmod +x '/home/hussyvel/Documents/eclipse-inst-linux64.tar.gz' 
+
+tar -vzxf '/home/hussyvel/Documents/eclipse-inst-linux64.tar.gz' 
+
+Após isto é só clicar no executável dentro da pasta Documents
+
