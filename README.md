@@ -1,6 +1,6 @@
 # Java
 
-#Instalação do Java no Linux - Ubuntu |Java installation on Linux - Ubuntu
+#Instalação do Java no Linux - Ubuntu | Java installation on Linux - Ubuntu
 
 
 #Download do Repositório:
