@@ -52,3 +52,7 @@ tar -vzxf '/home/hussyvel/Documents/eclipse-inst-linux64.tar.gz'
 
 Após isto é só clicar no executável dentro da pasta Documents
 
+Shell do Java
+
+>jshell
+
