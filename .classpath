@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Algoritmos/src"/>
+	<classpathentry kind="src" path="Calculadora/src"/>
+	<classpathentry kind="src" path="clinica/src"/>
+	<classpathentry kind="src" path="Conversao/src"/>
+	<classpathentry kind="src" path="eclipse-workspace/projects/src"/>
+	<classpathentry kind="src" path="Excript/src"/>
+	<classpathentry kind="src" path="Exercicios/src"/>
+	<classpathentry excluding="java/|Projects/src/|java-certification/" kind="src" path="java"/>
+	<classpathentry kind="src" path="java-certification"/>
+	<classpathentry kind="src" path="java/java"/>
+	<classpathentry kind="src" path="java/java-certification"/>
+	<classpathentry kind="src" path="java/Projects/src"/>
+	<classpathentry kind="src" path="Ordenacao_algoritmos/src"/>
+	<classpathentry kind="src" path="Polimorfismo/src"/>
+	<classpathentry excluding="src/" kind="src" path="ProgramasJava"/>
+	<classpathentry kind="src" path="ProgramasJava/src"/>
+	<classpathentry kind="src" path="Projects/src"/>
+	<classpathentry kind="src" path="Recursividade/src"/>
+	<classpathentry kind="src" path="variaveis-fluxo/src"/>
+	<classpathentry kind="output" path="Algoritmos/bin"/>
+</classpath>
