@@ -1,15 +1,16 @@
 package fundamentos;
 
+import java.util.Scanner;
+
 public class Console {
 	public static void main(String[] args) {
-		System.out.println("Bom");
-		System.out.println(" dia!\n\n");
-		
-		System.out.println("Bom");
-		System.out.println("dia");
-		
-		System.out.printf("Numeros de 1 a 6 com %d %d %d %d %d %d", 1, 2, 3, 4, 5, 6);
-		
-		System.out.printf("%n salario: %.1f", 1234.5678);
+		Scanner a = new Scanner(System.in);
+		String nome = a.nextLine();
+		String sobrenome = a.nextLine();
+		String idade = a.nextLine();
+		String salario = a.nextLine();
+
+		System.out.printf("Nome %s %s age %s e salario %s", nome, sobrenome,
+				idade, salario);
 	}
 }
