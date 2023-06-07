@@ -1,35 +1,40 @@
 package DesbravandoJavaOO;
 
-import java.awt.*;
-import java.sql.SQLSyntaxErrorException;
+import java.time.LocalDate;
 
 public class Testes {
 
     private String nome;
-    private double cpf;
-    private double number;
+    private String descricao;
+    private double valor;
+    private String isbn;
+    private LocalDate minhaData;
 
     void detalhesTestes(){
-        String mensagem = "Mostrando detalhes de testes";
-        System.out.println("O seu nome é: " + nome);
-        System.out.println("O seu cpf é: " + cpf);
-        System.out.println("O seu número é: " + number);
+        String mensagem = "Detalhes dos atributos";
+        System.out.println("O seu nome é :" + nome);
+        System.out.println("A sua descrição é: " + descricao);
+        System.out.println("O seu valor é: " + valor);
+        System.out.println("A data é "+ minhaData);
         System.out.println("---");
+
     }
-    public static void main(String[] args) {
+    public static void main(String []args){
 
         Testes teste = new Testes();
         teste.nome = "Hussyvel";
-        teste.cpf = 1608453654;
-        teste.number = 4444990;
+        teste.descricao = "Software Engineer";
+        teste.valor = 99.00;
+        teste.minhaData = LocalDate.ofEpochDay(26/05/2023);
 
-        teste.detalhesTestes();
+         teste.detalhesTestes();
 
-        Testes teste2 = new Testes();
-        teste2.nome = "Edinara";
-        teste2.cpf = 89230098;
-        teste2.number = 234958;
+         Testes outroTeste = new Testes();
+         outroTeste.nome = "João Ethan";
+         outroTeste.descricao = "Meu filho";
+         outroTeste.valor = 100.98;
+         outroTeste.minhaData = LocalDate.ofEpochDay(26/05/2023);
 
-        teste2.detalhesTestes();
+         outroTeste.detalhesTestes();
     }
 }
