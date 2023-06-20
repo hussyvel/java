@@ -7,16 +7,10 @@ import java.util.Scanner;
 public class Teste {
     public static void main(String args[]) {
 
-        Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        int senha = sc.nextInt();
 
-        while (senha != 2002){
-            senha = sc.nextInt();
-            System.out.println("Senha inválida" + senha);
-        }
-
-            System.out.println("Acesso permitido " + senha);
+        char man = 'M';
+        System.out.println("um caractere!!!!");
 
         sc.close();
     }
