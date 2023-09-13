@@ -1,0 +1,2 @@
+public class Prog1 {
+}

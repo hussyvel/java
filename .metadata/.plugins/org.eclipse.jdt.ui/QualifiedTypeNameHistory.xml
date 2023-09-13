@@ -24,4 +24,5 @@
     <fullyQualifiedTypeName name="br.com.alura.forum.modelo.Topico"/>
     <fullyQualifiedTypeName name="br.com.alura.forum.controller.dto.TopicoDto"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
