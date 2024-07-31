@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class Java_1001 {
+import java.util.Scanner;
+
+public class Java_1001 {
+    public static void main(String[] args) {
+
+    }
+
 }

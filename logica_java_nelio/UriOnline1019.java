@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class UriOnline1019 {
+public class UriOnline1019 {
+    public static void main(String[] args) {
+        
+    }
 }
