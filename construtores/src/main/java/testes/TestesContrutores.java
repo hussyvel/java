@@ -1,14 +1,20 @@
-package application;
+package testes;
 
-public class Pessoa {
+import application.Pessoa;
+
+public class TestesContrutores {
     private String nome;
     private int idade;
 
-    public Pessoa(){
-        initialized();
+    public TestesContrutores(){
+
     }
 
-    public Pessoa(String nome, int idade){
+    public TestesContrutores(String nome){
+        this.nome = nome;
+    }
+
+    public TestesContrutores(String nome, int idade){
         this.nome = nome;
         this.idade = idade;
     }
@@ -29,7 +35,8 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public void initialized(){
 
-    }
 }
+
+
+

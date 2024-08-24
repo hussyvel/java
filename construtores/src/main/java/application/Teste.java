@@ -5,11 +5,20 @@ import java.awt.*;
 
 public class Teste {
     public static void main(String[] args) {
+        String conta = "00-234-2333";
+        int posicao = 7;
+        int i = 0;
 
-        Pessoa p = new Pessoa("hussyvel", 0);
-        Pessoa p1 = new Pessoa("Teste", 25);
+        while (posicao < conta.length()) {
+            char c = conta.charAt(posicao);
 
-        System.out.println(p.getNome());
-        System.out.println(p1.getIdade());
+            if (c == '-'){
+                posicao++;
+            }
+            i++;
+        }
+
+        System.out.println(conta.substring(0, posicao));
+
     }
 }
