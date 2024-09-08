@@ -10,14 +10,14 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
      /*   Product p = new Product();*/
-
+/*
         System.out.println("Enter product data ");
         System.out.print("Name: ");
         String name = sc.nextLine();
         System.out.print("Price: ");
         double price = sc.nextDouble();
 
-        Product product = new Product(name, price);
+       // Product product = new Product(name, price, quantity);
 
         product.setName("Computer");
         System.out.println("Update name: " + product.getName());
@@ -43,5 +43,6 @@ public class Program {
         System.out.println();
         System.out.println("Updated data: " + product);
         sc.close();
+        */
     }
 }

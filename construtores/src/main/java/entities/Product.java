@@ -1,42 +1,44 @@
 package entities;
 public class Product {
-    private String name;
+    String name;
     private double price;
     private int quantity;
 
     public Product(){
-        //esse é apenas um construtor default e pode ficar zerado
+
     }
 
-    public Product(String name, double price, int quantity){
+
+    public Product(String name, double price, int quantity) {
+        super();
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public Product(String name, double price){
+    public Product(String name, double price) {
+        super();
         this.name = name;
         this.price = price;
-        this.quantity = 0; //a palavra this.quantity poderia ser retirado.
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price){
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public int getQuantity(){
+    public int getQuantity() {
         return quantity;
     }
 

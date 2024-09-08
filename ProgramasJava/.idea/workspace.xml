@@ -4,26 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca42ea4a-0161-4cda-849e-de90ecbdd57b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exercicio_fixacao/Program.java" afterDir="false" />
+    <list default="true" id="50080272-ab3d-4d19-9997-526b6804e699" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../construtores/src/main/java/entities/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../construtores/src/main/java/exercicio_fixacao/Program.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../javaGuiaDoProgramador16/EntradaNãoFormatada.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../javaGuiaDoProgramador16/EntradaSimples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/Fundamentos/TomadaDeDecisão.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/CalculadoraII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/Testes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/TomadaDeDecisao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/While.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/Wrappers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/CalculadoraII.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/Testes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/TomadaDeDecisao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/While.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/Wrappers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/testes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundamentos/TomadaDeDecisão.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/CalculadoraII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Testes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/TomadaDeDecisao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/While.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Wrappers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculadoraII.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Testes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TomadaDeDecisao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/While.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Wrappers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build/classes/projeto/Exercicio10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build/classes/projeto/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build/classes/projeto/Projeto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/build/classes/projeto/Quadrilatero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/src/projeto/Exercicio10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/src/projeto/Exercicio10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/src/projeto/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/src/projeto/Projeto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto/src/projeto/Quadrilatero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../construtores/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../construtores/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../construtores/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../construtores/src/main/java/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../construtores/src/main/java/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../construtores/src/main/java/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../construtores/src/main/java/testes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../construtores/src/main/java/testes/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/JavaWeb/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.log" beforeDir="false" />
@@ -76,168 +95,58 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2k3qBOQsr0wFHt8ibdoULLLYCWQ" />
+  <component name="ProjectId" id="2lZ0TUWFf06JcURCdnhcZPAj2SK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Apenastestes.executor": "Run",
-    "Application.BookJavaGuide.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Program.executor": "Run",
-    "Application.Teste (1).executor": "Run",
-    "Application.Teste (2).executor": "Run",
-    "Application.Teste.executor": "Debug",
-    "Application.exercicio_fixacao.Program.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/java/construtores",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Testes.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Wrappers.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hussyvel-dev/backup_hussyvel/dev/java/java/javaGuiaDoProgramador16&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.exercicio_fixacao.Program">
-    <configuration name="BookJavaGuide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testes.BookJavaGuide" />
-      <module name="construtores" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+}</component>
+  <component name="RunManager" selected="Application.Testes">
+    <configuration name="Testes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Testes" />
+      <module name="ProgramasJava" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testes.Main" />
-      <module name="construtores" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.Program" />
-      <module name="construtores" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="application.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="application.Teste" />
-      <module name="construtores" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="application.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exercicio_fixacao.Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercicio_fixacao.Program" />
-      <module name="construtores" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="exercicio_fixacao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Wrappers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Wrappers" />
+      <module name="ProgramasJava" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.exercicio_fixacao.Program" />
-        <item itemvalue="Application.BookJavaGuide" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Program" />
-        <item itemvalue="Application.Teste" />
+        <item itemvalue="Application.Testes" />
+        <item itemvalue="Application.Wrappers" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ca42ea4a-0161-4cda-849e-de90ecbdd57b" name="Changes" comment="" />
-      <created>1722522474170</created>
+      <changelist id="50080272-ab3d-4d19-9997-526b6804e699" name="Changes" comment="" />
+      <created>1725372298579</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1722522474170</updated>
+      <updated>1725372298579</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/Teste.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
