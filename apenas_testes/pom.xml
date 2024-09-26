@@ -5,7 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.hussyvel.java</groupId>
+<<<<<<< HEAD
     <artifactId>ExercicioProductProgram</artifactId>
+=======
+    <artifactId>apenas_testes</artifactId>
+>>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
     <version>1.0-SNAPSHOT</version>
 
     <properties>

@@ -4,7 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ca42ea4a-0161-4cda-849e-de90ecbdd57b" name="Changes" comment="" />
+=======
+    <list default="true" id="ca42ea4a-0161-4cda-849e-de90ecbdd57b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exercicio_fixacao/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaGuiaDoProgramador16/EntradaNãoFormatada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaGuiaDoProgramador16/EntradaSimples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/Fundamentos/TomadaDeDecisão.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/CalculadoraII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/Testes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/TomadaDeDecisao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/While.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/bin/Wrappers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/CalculadoraII.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/Testes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/TomadaDeDecisao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/While.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProgramasJava/src/Wrappers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/JavaWeb/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.projects/Servlets - inicial/.indexes/properties.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.projects/Servlets/.indexes/af/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.projects/Servlets/1.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.resources/0.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.jsp.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.mylyn.github.ui/avatars.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/.plugins/org.eclipse.wst.internet.cache/cache.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devmedia_exemplo/src-curso/.metadata/version.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/.idea/livroJavaNovatec.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/P0202Eco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/P0202Eco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/P0203Escopo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/out/production/livroJavaNovatec/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/out/production/livroJavaNovatec/.idea/livroJavaNovatec.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/out/production/livroJavaNovatec/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/out/production/livroJavaNovatec/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../livroJavaNovatec/out/production/livroJavaNovatec/.idea/vcs.xml" beforeDir="false" />
+    </list>
+>>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,11 +112,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/javaGuiaDoProgramador16",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Main">
+=======
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/java/construtores",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.exercicio_fixacao.Program">
+>>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
     <configuration name="BookJavaGuide" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="testes.BookJavaGuide" />
       <module name="construtores" />
@@ -114,9 +192,15 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.exercicio_fixacao.Program" />
         <item itemvalue="Application.BookJavaGuide" />
+=======
+        <item itemvalue="Application.exercicio_fixacao.Program" />
+        <item itemvalue="Application.BookJavaGuide" />
+        <item itemvalue="Application.Main" />
+>>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
         <item itemvalue="Application.Program" />
         <item itemvalue="Application.Teste" />
       </list>

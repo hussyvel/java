@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/ApenasTestes/untitled" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Exercicio2_lerdadosFuncionario" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Exercicio4" vcs="Git" />
@@ -8,5 +9,8 @@
     <mapping directory="$PROJECT_DIR$/Java_8_livro_certificacao" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Notas_Aluno_media" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/java" vcs="Git" />
+=======
+    <mapping directory="" vcs="Git" />
+>>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
   </component>
 </project>

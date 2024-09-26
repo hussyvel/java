@@ -7,7 +7,10 @@ public class EntradaSimples {
 
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
+<<<<<<< HEAD
      
+=======
+>>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
 
         System.out.println("Valor = " + x);
 
