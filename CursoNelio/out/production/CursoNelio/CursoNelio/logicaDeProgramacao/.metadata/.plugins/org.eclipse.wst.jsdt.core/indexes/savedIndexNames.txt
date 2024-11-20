@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+/home/hussyvel-dev/backup hussyvel/dev/java/java/CursoNelio/logicaDeProgramacao/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+883796506.index

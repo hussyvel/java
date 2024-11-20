@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56422c2c-b048-4dec-86d3-70537c471356" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio15.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/test/InicialTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Triangule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java.eml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java.userlibraries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.project" beforeDir="false" afterPath="$PROJECT_DIR$/../.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/CursoNelio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/CursoNelio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoJava/Logica.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoJava/Logica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/Teste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/CursoNelio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/CursoNelio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Teste.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSE8/Prog1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaSE8/Prog1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Carro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoAlexEAD/PalavrasReservadas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoLoiane/LendoTeclado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/EntradaDeDadosI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/EntradaDeDadosII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/FuncoesMatematicas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/DesbravandoJavaOO/CalculadoraDeEstoque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/DesbravandoJavaOO/For.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Grupo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaSE8/Prog1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/LendoTeclado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/src/fundamentos/Teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/dev.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/fundamentos/CalculadoraDeEstoque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/fundamentos/Lacofor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/fundamentos/Wrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/javaapplication2/Carro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/javaapplication2/Documento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/javaapplication2/JavaApplication2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/projeto/Exercicio10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/projeto/Projeto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/dev/projeto/Quadrilatero.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2Rqep3Vl5xTGWfjx6ZiPeJSgERX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/hussyvel/dev/workspace2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Program" />
+      <module name="OrientacaoObjetosJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56422c2c-b048-4dec-86d3-70537c471356" name="Changes" comment="" />
+      <created>1687982218908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687982218908</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/application/Program.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/application/Program.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
