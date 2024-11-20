@@ -31,7 +31,6 @@ public class Rent {
 
     @Override
     public String toString() {
-        return "Nome " + nome + ',' +
-                "email " + email;
+        return nome + ',' + email;
     }
 }
