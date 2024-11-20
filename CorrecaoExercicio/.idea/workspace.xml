@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06356c2d-c6bd-44b7-adad-e68068283b17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../java8ComoProgramar/Program.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java8ComoProgramar/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/Interface/Interface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/Prog1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/Program/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/construtor/X.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/entities/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/java-certification.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-certification/out/production/java-certification/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/javaComoProgramar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/Addition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/JavaSE8programar1/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/JavaSE8programar1/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/javaComoProgramar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/Addition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/JavaSE8programar1/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaGuiaDoProgramador16/P0203Escopo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../javaGuiaDoProgramador16/P0203Escopo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javaGuiaDoProgramador16/out/production/livroJavaNovatec/EntradaSimples.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaGuiaDoProgramador16/out/production/livroJavaNovatec/EntradaSimples.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2leZzj9Ju9sj8tu6kod2ncJgUhh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Program.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/CorrecaoExercicio"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Program" />
+      <module name="CorrecaoExercicio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06356c2d-c6bd-44b7-adad-e68068283b17" name="Changes" comment="" />
+      <created>1725542768378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725542768378</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60d02606-7a2e-4580-bbef-e8420f32de4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/encapsulamento/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplication/Program3.java" beforeDir="false" afterPath="$PROJECT_DIR$/aplication/Program3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/Product3.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/Product3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Carro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$AnaliseDeCheque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$EstruturaCondicional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$JavaApplication5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Logica.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Numero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/EntradaDeDadosII.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio2_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio2_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/ExercicioFixacao1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/FuncoesJava.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/FuncoesMatematicas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/LoopFor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/LoopWhile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/ManipulacaoDeStrings2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/OperadoresBitwise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Teste.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/TesteDeBitDeNumero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/AreaCalc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/CalcularCotacao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/Carro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/ConstantesEmJava.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/EntradaDeDados.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/Membros.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/NotasAluno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/RetanguloApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/SimpleCurrencyConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/Variaveis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/testesDevMedia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Aluno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Product3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/ProductExecicio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Retangulo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Triangle.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2MLgoOlzlmkzVrw9sDDqEHQWJCD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.CalcularCotacao.executor": "Run",
+    "Application.Carro.executor": "Run",
+    "Application.ConstantesEmJava.executor": "Run",
+    "Application.CotacaoDollar.executor": "Run",
+    "Application.CursoNelio.encapsulamento.Program.executor": "Run",
+    "Application.Exercicio15.executor": "Run",
+    "Application.ManipulacaoDeStrings.executor": "Run",
+    "Application.ManipulacaoDeStrings2.executor": "Run",
+    "Application.Membros.executor": "Run",
+    "Application.NotasAluno.executor": "Run",
+    "Application.OperadoresBitwise.executor": "Run",
+    "Application.Prog6.executor": "Run",
+    "Application.Program.executor": "Run",
+    "Application.Program3.executor": "Run",
+    "Application.ProgramaProduct.executor": "Run",
+    "Application.RetanguloApplication.executor": "Run",
+    "Application.SaidaDeDadosJava.executor": "Run",
+    "Application.Strings.executor": "Run",
+    "Application.Teste.executor": "Run",
+    "Application.TesteDeBitDeNumero.executor": "Run",
+    "Application.Testes.executor": "Run",
+    "Application.Variaveis.executor": "Run",
+    "Application.testesDevMedia.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Java Scratch.PrimeNumbers.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/java/CursoNelio",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="sysout" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Program3">
+    <configuration name="CursoNelio.encapsulamento.Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CursoNelio.encapsulamento.Program" />
+      <module name="CursoNelio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CursoNelio.encapsulamento.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercicio15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CursoNelio.Exercicio15" />
+      <module name="CursoNelio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CursoNelio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CursoNelio.constructor.Program" />
+      <module name="CursoNelio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CursoNelio.constructor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Program3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CursoNelio.aplication.Program3" />
+      <module name="CursoNelio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CursoNelio.aplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VariaveisETipos" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="CursoNelio.VariaveisETipos" />
+      <module name="CursoNelio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testesDevMedia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CursoNelio.aplication.testesDevMedia" />
+      <module name="CursoNelio" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CursoNelio.aplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.VariaveisETipos" />
+      <item itemvalue="Application.CursoNelio.encapsulamento.Program" />
+      <item itemvalue="Application.Exercicio15" />
+      <item itemvalue="Application.Program" />
+      <item itemvalue="Application.Program3" />
+      <item itemvalue="Application.testesDevMedia" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program3" />
+        <item itemvalue="Application.CursoNelio.encapsulamento.Program" />
+        <item itemvalue="Application.Program" />
+        <item itemvalue="Application.Exercicio15" />
+        <item itemvalue="Application.testesDevMedia" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60d02606-7a2e-4580-bbef-e8420f32de4a" name="Changes" comment="" />
+      <created>1677552450139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677552450139</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LoopFor.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LoopFor.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LoopFor.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LoopFor.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/LoopFor.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio3.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio7.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio7.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio7.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio7.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio7.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio8.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio8.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio8.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio8.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Exercicio8.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CursoNelio$Teste.ic" NAME="Teste Coverage Results" MODIFIED="1683222638238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>CursoNelio.*</FILTER>
+    </SUITE>
+  </component>
+</project>
