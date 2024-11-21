@@ -1,24 +1,24 @@
 package entities;
 
 public class Rent {
-    private String nome;
+    private String name;
     private String email;
 
     public Rent(){
 
     }
 
-    public Rent(String nome, String email){
-        this.nome = nome;
+    public Rent(String name, String email){
+        this.name = name;
         this.email = email;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -31,6 +31,6 @@ public class Rent {
 
     @Override
     public String toString() {
-        return nome + ',' + email;
+        return name + " , "+ email;
     }
 }

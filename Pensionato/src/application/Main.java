@@ -12,9 +12,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Rent[] vetor = new Rent[10]; //criando o vetor de 10 posições
-        System.out.print("How many rooms will be rented? ");
 
-        Rent r = new Rent("Hussyvel Ribeiro", "Hussyvel@gmail.com");
+        System.out.print("How many rooms will be rented? ");
         int n = sc.nextInt();
 
         for (int i = 1; i <= n; i++) {
@@ -25,10 +24,18 @@ public class Main {
            System.out.print("Email: ");
            String email = sc.nextLine();
            System.out.println("Room: ");
+           int roomNumber = sc.nextInt();
 
-           Rent rent = new Rent(name, email);
+           vetor[roomNumber] = new Rent(name, email);
+
         }
 
-        System.out.println(r);
+        for (int i = 0; i < 10; i++){
+            if (vetor[i] != null){
+                System.out.println(i + " : " + vetor[i]);
+            }
+        }
+
+        sc.close();
     }
 }
