@@ -24,6 +24,7 @@ public class Main {
             String email = sc.nextLine();
             System.out.println("Quarto: ");
             int roomNumber = sc.nextInt();
+
             vetor[roomNumber] = new Rent(nome, email);
         }
 
