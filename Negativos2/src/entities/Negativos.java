@@ -13,7 +13,7 @@ public class Negativos {
         System.out.println();
         for (int i = 0; i < numeros.length; i++){
             if (numeros[i] < 0){
-                System.out.printf("O valor é negativo %d%n", numeros[i]);
+                System.out.printf("O valor negativo é: %d%n", numeros[i]);
             }
         }
     }
