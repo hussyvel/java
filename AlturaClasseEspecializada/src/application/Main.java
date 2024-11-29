@@ -1,5 +1,7 @@
 package application;
 
+import entities.Pessoa;
+
 import java.util.Locale;
 import java.util.Scanner;
 
