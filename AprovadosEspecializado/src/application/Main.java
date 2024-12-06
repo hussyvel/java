@@ -27,12 +27,13 @@ public class Main {
         }
 
         System.out.println("Alunos aprovados: ");
-        for (AprovadosEspecializados aprovadosEspecializados1 : aprovadosEspecializados) {
-            if (aprovadosEspecializados1.estaAprovado()){
-                System.out.println(aprovadosEspecializados1.getName());
+        for (AprovadosEspecializados teste : aprovadosEspecializados) {
+            if (teste.aprovados()){
+                System.out.println(teste.getName());
             }
         }
 
         sc.close();
     }
 }
+
