@@ -5,13 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DiaDaSemana hoje = DiaDaSemana.DOMINGO;
+        DiaDaSemana hoje = DiaDaSemana.TERCA;
 
         switch (hoje){
             case SEGUNDA:
                 System.out.println("é segunda");
                 break;
             case TERCA:
+                System.out.println("é terça-feira");
+                break;
             case DOMINGO:
                 System.out.println("Fim de semana");
                 break;
@@ -20,6 +22,4 @@ public class Main {
                 break;
         }
     }
-
-
 }
