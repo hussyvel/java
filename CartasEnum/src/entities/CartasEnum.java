@@ -2,18 +2,17 @@ package entities;
 
 public class CartasEnum {
 
-    public enum Cartas {
-        j(11), q(12), k(13), a(14);
+    public enum TipoDeCartas{
+        j(11), q(12), l(13), k(14);
 
-        public int valorCarta;
+        private final int valorDasCartas;
 
-        Cartas(int valor){
-            this.valorCarta = valor;
+        TipoDeCartas(int quaquerVariavelaqui){
+            this.valorDasCartas = quaquerVariavelaqui;
         }
 
-        public int getValorCarta(){
-            return valorCarta;
+        public int getValorDasCartas(){
+            return valorDasCartas;
         }
-
     }
 }
