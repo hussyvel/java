@@ -1,7 +1,6 @@
 package application;
 
 import entities.Employee;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -39,7 +38,6 @@ public class Main {
         System.out.println();
         System.out.print("Entre com o id do funcionário: ");
         int idSalary = sc.nextInt();
-
         Integer pos = positionId(list, idSalary);
         if (pos == null){
             System.out.println("Posição não encontrada!!!");
@@ -47,10 +45,11 @@ public class Main {
             System.out.println("Entre com a porcentagem a ser adicionada: ");
             double percent = sc.nextDouble();
             list.get(pos).increaseSalary(percent);
-
-            for (Employee emp : list){
-                System.out.println(emp);
-            }
+        }
+        System.out.println();
+        System.out.println("Lista de funcionários");
+        for (Employee emp : list){
+            System.out.println(emp);
         }
 
         sc.close();
@@ -62,6 +61,6 @@ public class Main {
                 return i;
             }
         }
-        return 0;
+        return null;
     }
 }
