@@ -10,17 +10,22 @@ public class Main {
         list.add("Edinara");
         list.add("Ethan");
         list.add("João");
-        list.add("Juarez");
-        list.add("Aldaíres");
-        list.add("Voinha");
-        list.add("Fernanda");
-        list.add("Silva");
+        list.add(2,"Marco");
 
+        System.out.println(list.size());
+        for (String a : list){
+            System.out.println(a);
+        }
 
-        list.add(2, "Dêniel");
+        System.out.println("----------");
+        list.set(1,"Fernanda");
 
+        for (String a : list){
+            System.out.println(a);
+        }
 
-        list.remove("Voinha");
+        System.out.println("-----------");
+        list.remove(2);
         for (String a : list){
             System.out.println(a);
         }

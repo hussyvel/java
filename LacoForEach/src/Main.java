@@ -1,15 +1,15 @@
 public class Main {
     public static void main(String[] args){
 
-        int[] numeros = new int[] {1 , 8, 6};
-        String[] nome = new String[] {"hussyvel", "Edinara", "João"};
+      String[] vector = new String[] {"João", "Maria", "Ethan"};
 
-        for (int a : numeros){
-            System.out.println(a);
-        }
+      for (int i = 0; i < vector.length; i++){
+          System.out.println(vector[i]);
+      }
 
-        for (String b : nome){
-            System.out.println(b);
-        }
+      System.out.println("--------------------");
+      for (String x : vector){
+          System.out.println(x);
+      }
     }
 }

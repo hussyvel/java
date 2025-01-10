@@ -45,10 +45,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee " +
-                "\n , id= " + id +
-                "\n , name='" + name + '\'' +
-                "\n , salary= " + salary +
-                ' ';
+        return "Employee " + "\n , id= " + id + "\n , name='" + name + '\n' + String.format("%.2f\n", salary);
     }
 }
