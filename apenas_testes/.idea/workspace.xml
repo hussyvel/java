@@ -5,43 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2660a9ad-7d72-4425-8d55-409d1d7e782e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../java8ComoProgramar/Program.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java8ComoProgramar/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/B.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/Interface/Interface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/Prog1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/Program/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/construtor/X.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/br/com/javaCertification/entities/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/java-certification.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-certification/out/production/java-certification/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/javaComoProgramar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/Addition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/Addition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/JavaSE8programar1/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/JavaSE8programar1/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/javaComoProgramar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/Addition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaComoProgramar/out/production/javaComoProgramar/JavaSE8programar1/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Product.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,19 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Program.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/MembrosEstaticos",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Program.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hussyvel-dev/backup_hussyvel/dev/java/apenas_testes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Program">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.hussyvel.java.Main" />
