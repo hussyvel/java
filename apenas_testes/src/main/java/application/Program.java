@@ -26,9 +26,9 @@ public class Program {
 
         System.out.println("Numeros negativos são");
 
-        for (int i = 0; i < vector.length; i++) {
-            if (vector[i] < 0){
-                System.out.println(vector[i]);
+        for (int i : vector) {
+            if (i < 0){
+                System.out.println(i);
             }
         }
 

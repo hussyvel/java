@@ -1,15 +1,12 @@
+
+
 public class Main {
     public static void main(String[] args){
 
-      String[] vector = new String[] {"João", "Maria", "Ethan"};
+      Integer[] inteiro = new Integer[] {8,36,42,68,49,78,99,128};
 
-      for (int i = 0; i < vector.length; i++){
-          System.out.println(vector[i]);
-      }
-
-      System.out.println("--------------------");
-      for (String x : vector){
-          System.out.println(x);
-      }
+        for (Integer i : inteiro) {
+            System.out.println(i);
+        }
     }
 }

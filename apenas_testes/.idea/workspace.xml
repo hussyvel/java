@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2660a9ad-7d72-4425-8d55-409d1d7e782e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/ExercicioPropostoMatriz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizDiagonal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizIrregular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizesImpressoesDiretas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/Matrizes_exercicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LacoForEach/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LacoForEach/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Listas2/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Listas2/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matrizes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matrizes/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Product.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Product.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/hussyvel-dev/backup_hussyvel/dev/java/apenas_testes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/hussyvel-dev/backup_hussyvel/dev/java/LacoForEach&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;

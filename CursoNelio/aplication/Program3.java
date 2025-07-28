@@ -1,9 +1,5 @@
 package CursoNelio.aplication;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
 import CursoNelio.entities.Product3;
 
 import java.util.Locale;
@@ -14,9 +10,6 @@ public class Program3 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-<<<<<<< HEAD
-
-=======
         Product3 product = new Product3();
         System.out.println("Entre com os dados");
 
@@ -46,7 +39,7 @@ public class Program3 {
         System.out.println("Atualizar produto: " + product);
 
         sc.close();
->>>>>>> 1eaa7809e0c2ded1d80477dfa95d3a5311743ee2
+
     }
 
 }

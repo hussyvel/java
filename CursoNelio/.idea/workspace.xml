@@ -5,65 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d02606-7a2e-4580-bbef-e8420f32de4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/encapsulamento/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/ExercicioPropostoMatriz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizDiagonal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizIrregular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizesImpressoesDiretas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/Matrizes_exercicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aplication/Program3.java" beforeDir="false" afterPath="$PROJECT_DIR$/aplication/Program3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/Product3.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/Product3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Carro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$AnaliseDeCheque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$EstruturaCondicional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio01.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Exercicio7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$JavaApplication5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Logica.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana$Numero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/DiaSemana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/EntradaDeDadosII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio2_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio2_2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Exercicio7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/ExercicioFixacao1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/FuncoesJava.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/FuncoesMatematicas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/LoopFor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/LoopWhile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/ManipulacaoDeStrings2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/OperadoresBitwise.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Prog6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/Teste.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/TesteDeBitDeNumero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/AreaCalc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/CalcularCotacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/Carro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/ConstantesEmJava.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/EntradaDeDados.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/Membros.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/NotasAluno.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/RetanguloApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/SimpleCurrencyConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/Variaveis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/aplication/testesDevMedia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Aluno.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Product3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/ProductExecicio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Retangulo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CursoNelio/CursoNelio/entities/Triangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LacoForEach/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LacoForEach/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Listas2/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Listas2/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matrizes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matrizes/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumento.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/Argumento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumento2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumentos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/Argumentos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/OlaMundo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/OlaMundo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apenas_testes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apenas_testes/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/src/main/java/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apenas_testes/target/classes/application/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/target/classes/application/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logica_java_nelio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../logica_java_nelio/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +73,7 @@
     "Application.OperadoresBitwise.executor": "Run",
     "Application.Prog6.executor": "Run",
     "Application.Program.executor": "Run",
-    "Application.Program3.executor": "Run",
+    "Application.Program3.executor": "Debug",
     "Application.ProgramaProduct.executor": "Run",
     "Application.RetanguloApplication.executor": "Run",
     "Application.SaidaDeDadosJava.executor": "Run",
@@ -127,10 +90,10 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/java/CursoNelio",
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/logica_java_nelio",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",

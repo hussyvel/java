@@ -5,160 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2880ac38-dd93-48d5-9347-f3389e9b730a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio11.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio12.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio13.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio14.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/Exercicio15.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoNelio/JavaApplication5/src/CursoJava/AnaliseDeCheque.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoNelio/JavaApplication5/src/CursoJava/EstruturaCondicional.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoNelio/JavaApplication5/src/CursoJava/Numero.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/test/InicialTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/aplication/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Exercicio11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Exercicio12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Exercicio13.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Exercicio14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Exercicio15.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/test/InicialTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/Prog1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/src/main/java/org/example/Exemplo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Learn_Java/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/src/main/java/application/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/src/main/java/entities/Triangule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../OrientacaoObjetosJava/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java.eml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java.userlibraries" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.project" beforeDir="false" afterPath="$PROJECT_DIR$/../.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/CursoNelio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/CursoNelio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoJava/Logica.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/build/classes/CursoJava/Logica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/JavaApplication5/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/Teste.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/Teste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/CursoNelio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/CursoNelio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/JavaApplication5/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Teste.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/out/production/CursoNelio/CursoNelio/Teste.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/CalculadoraDeEstoque.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/ContinueBreak.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/DesbravandoJavaOO.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/For.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/For.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/NegacaoBooleana.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/OrientacaoObjetos/CadastroDeLivros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/Testes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/CalculadoraDeEstoque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/ContinueBreak.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/DesbravandoJavaOO.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/For.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/NegacaoBooleana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/OrientacaoObjetos/CadastroDeLivros.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DesbravandoJavaOO/out/production/DesbravandoJavaOO/DesbravandoJavaOO/Testes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaApplication2/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaApplication2/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaApplication2/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaApplication2/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSE8/Prog1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaSE8/Prog1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Projeto/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projeto/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Projeto/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Testes/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Testes/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Testes/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Testes/nbproject/private/private.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn_Java/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Carro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CarroCorrida/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoAlexEAD/PalavrasReservadas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoLoiane/LendoTeclado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/EntradaDeDadosI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/EntradaDeDadosII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/FuncoesMatematicas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Prog5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/CursoNelio/Teste.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/DesbravandoJavaOO/CalculadoraDeEstoque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/DesbravandoJavaOO/For.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Grupo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/build/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/build/classes/.netbeans_update_resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaApplication2/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/JavaSE8/Prog1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/LendoTeclado.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/build/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/build/classes/.netbeans_update_resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Projeto/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/build/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/build/classes/.netbeans_update_resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/Testes/src/fundamentos/Teste.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Useacabeca.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/fundamentos/CalculadoraDeEstoque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/fundamentos/Lacofor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/fundamentos/Wrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/javaapplication2/Carro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/javaapplication2/Documento.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/javaapplication2/JavaApplication2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/projeto/Exercicio10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/projeto/Projeto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/dev/projeto/Quadrilatero.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datas/data/src/ConvertendoDataHoraGlobalParaLocal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datas/data/src/ConvertendoDataHoraParaTexto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datas/data/src/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Datas/data/src/Pratica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/ExercicioPropostoMatriz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizDiagonal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizIrregular.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizesImpressoesDiretas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/Matrizes_exercicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../livroHeadFirstJava/Example01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../livroHeadFirstJava/PhraseOMatic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/aplication/Program3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/aplication/Program3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LacoForEach/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LacoForEach/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Listas2/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Listas2/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Matrizes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matrizes/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumento.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/Argumento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumento2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumentos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/Argumentos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projects/src/OlaMundo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/OlaMundo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apenas_testes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apenas_testes/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/src/main/java/application/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apenas_testes/target/classes/application/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/target/classes/application/Program.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logica_java_nelio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../logica_java_nelio/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,9 +54,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/hussyvel/dev/java/java/CursoNelio"
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/Useacabeca"
   }
 }]]></component>
   <component name="RunManager">
