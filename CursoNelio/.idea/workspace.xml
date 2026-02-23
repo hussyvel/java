@@ -5,28 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60d02606-7a2e-4580-bbef-e8420f32de4a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CursoNelio2/Curso/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/ExercicioPropostoMatriz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizDiagonal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizIrregular.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/MatrizesImpressoesDiretas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Matrizes/src/Matrizes1/Matrizes_exercicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/LivroJavaComoProgramar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/src/CalculoDelta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/src/Divisao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/src/MediaPonderada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/src/NumeroImparPar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/src/PrimeiroNumeroMultiploDoSegundo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Aritmetica-in-Java/src/SeparacaoDeDigitos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Enumeracoes/Enumeracoes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Enumeracoes/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjectEToString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Objects/Objects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Objects/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaComoProgramar/JavaComoProgramar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaComoProgramar/src/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaComoProgramar/src/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CursoNelio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CursoNelio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aplication/Program3.java" beforeDir="false" afterPath="$PROJECT_DIR$/aplication/Program3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LacoForEach/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LacoForEach/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Listas2/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Listas2/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Matrizes/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Matrizes/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumento.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/Argumento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumento2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projects/src/Argumentos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/Argumentos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projects/src/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projects/src/OlaMundo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Projects/src/OlaMundo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apenas_testes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apenas_testes/src/main/java/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/src/main/java/application/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apenas_testes/target/classes/application/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apenas_testes/target/classes/application/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logica_java_nelio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../logica_java_nelio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java8ComoProgramar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java8ComoProgramar/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +64,7 @@
     "Application.CotacaoDollar.executor": "Run",
     "Application.CursoNelio.encapsulamento.Program.executor": "Run",
     "Application.Exercicio15.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Application.ManipulacaoDeStrings.executor": "Run",
     "Application.ManipulacaoDeStrings2.executor": "Run",
     "Application.Membros.executor": "Run",
@@ -91,13 +90,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/logica_java_nelio",
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/CursoNelio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/hussyvel-dev/backup_hussyvel/dev/java/CursoNelio/Enumeracoes/src/Main.java",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19885057",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunAnythingCache">
@@ -105,7 +112,7 @@
       <command value="sysout" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Program3">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="CursoNelio.encapsulamento.Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CursoNelio.encapsulamento.Program" />
       <module name="CursoNelio" />
@@ -132,6 +139,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Objects" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CursoNelio.constructor.Program" />
       <module name="CursoNelio" />
@@ -146,6 +160,8 @@
       </method>
     </configuration>
     <configuration name="Program3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="temurin-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="CursoNelio.aplication.Program3" />
       <module name="CursoNelio" />
       <extension name="coverage">
@@ -167,36 +183,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testesDevMedia" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CursoNelio.aplication.testesDevMedia" />
-      <module name="CursoNelio" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CursoNelio.aplication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.VariaveisETipos" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.CursoNelio.encapsulamento.Program" />
       <item itemvalue="Application.Exercicio15" />
       <item itemvalue="Application.Program" />
       <item itemvalue="Application.Program3" />
-      <item itemvalue="Application.testesDevMedia" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Program3" />
         <item itemvalue="Application.CursoNelio.encapsulamento.Program" />
         <item itemvalue="Application.Program" />
         <item itemvalue="Application.Exercicio15" />
-        <item itemvalue="Application.testesDevMedia" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -206,8 +217,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677552450139</updated>
+      <workItem from="1770669080619" duration="1078000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -305,6 +320,11 @@
           <url>file://$PROJECT_DIR$/Exercicio8.java</url>
           <line>10</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Enumeracoes/src/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

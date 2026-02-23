@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2252d029-ec14-402a-bd20-2320aa6c04dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Datas/data/src/CalendarioExemplo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/javaComoProgramar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/.idea/javaComoProgramar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaComoProgramar/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../programas/src/programas/TESTE.java" beforeDir="false" afterPath="$PROJECT_DIR$/../programas/src/programas/TESTE.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Enumeracoes/Enumeracoes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CursoNelio/Enumeracoes/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaComoProgramar/src/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaComoProgramar/src/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CursoNelio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CursoNelio/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +118,7 @@
       <updated>1758157635807</updated>
       <workItem from="1758157637057" duration="2941000" />
       <workItem from="1758162316889" duration="56000" />
+      <workItem from="1763759245906" duration="49000" />
     </task>
     <servers />
   </component>
