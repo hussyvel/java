@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84b2376-c53a-4255-82fb-faae3d59a327" name="Changes" comment="" />
+    <list default="true" id="f84b2376-c53a-4255-82fb-faae3d59a327" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Produto/src/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Produto/src/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto1/src/entities/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Projeto1/src/entities/Triangle.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="33CBzPnLF1azLgFik29BhQikti2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,9 +33,12 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/hussyvel-dev/backup_hussyvel/dev/java/JavaComoProgramasr",
+    "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/home/hussyvel-dev/backup_hussyvel/dev/java/JavaComoProgramasr/src/Main.java",
     "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "settings.editor.splitter.proportion": "0.23007064"
+    "settings.editor.splitter.proportion": "0.23007064",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -51,6 +57,15 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f84b2376-c53a-4255-82fb-faae3d59a327" name="Changes" comment="" />
@@ -58,7 +73,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758811435552</updated>
+      <workItem from="1772457511183" duration="15000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
