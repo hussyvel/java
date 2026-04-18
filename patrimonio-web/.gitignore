@@ -1,0 +1,17 @@
+# Maven
+target/
+*.jar
+*.war
+
+# IDE
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dataSources.local.xml
+*.iml
+
+# Claude Code
+.claude/worktrees/
+.claude/settings.local.json
+
+# Ambiente local
+*.env

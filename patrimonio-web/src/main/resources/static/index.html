@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Patrimonial</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #222; }
+  input, select, textarea, button { font-family: inherit; font-size: 14px; }
+  button { cursor: pointer; border: none; border-radius: 6px; padding: 8px 16px; transition: opacity .15s; }
+  button:hover { opacity: .85; }
+
+  /* LOGIN */
+  #loginPage { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e3c64 0%, #2a5298 100%); }
+  .loginCard { background: #fff; border-radius: 12px; padding: 40px 36px; width: 360px; box-shadow: 0 8px 32px rgba(0,0,0,.2); }
+  .loginCard h1 { color: #1e3c64; font-size: 20px; margin-bottom: 4px; text-align: center; }
+  .loginCard p  { color: #888; font-size: 12px; text-align: center; margin-bottom: 28px; }
+  .formGroup { margin-bottom: 16px; }
+  .formGroup label { display: block; font-size: 12px; font-weight: 600; color: #444; margin-bottom: 6px; }
+  .formGroup input, .formGroup select, .formGroup textarea { width: 100%; padding: 10px 12px; border: 1px solid #d0d7e3; border-radius: 6px; outline: none; transition: border .2s; }
+  .formGroup input:focus, .formGroup select:focus, .formGroup textarea:focus { border-color: #2a5298; }
+  .btnPrimary { background: #1e3c64; color: #fff; width: 100%; padding: 11px; font-weight: 600; font-size: 15px; border-radius: 6px; }
+  .hint { text-align: center; color: #aaa; font-size: 11px; margin-top: 12px; }
+
+  /* LAYOUT */
+  #appPage { display: none; min-height: 100vh; flex-direction: column; }
+  header { background: #1e3c64; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+  header h2 { font-size: 16px; font-weight: 700; }
+  .userInfo { font-size: 13px; display: flex; align-items: center; gap: 12px; }
+  .badgePerfil { background: rgba(255,255,255,.15); border-radius: 20px; padding: 2px 10px; font-size: 11px; font-weight: 600; }
+  .btnLogout { background: rgba(255,255,255,.15); color: #fff; padding: 5px 14px; font-size: 12px; }
+  nav { background: #253a5e; display: flex; gap: 2px; padding: 0 20px; }
+  .navBtn { background: transparent; color: #b0c4de; border: none; padding: 12px 20px; font-size: 13px; border-bottom: 3px solid transparent; border-radius: 0; }
+  .navBtn:hover { color: #fff; opacity: 1; }
+  .navBtn.active { color: #fff; border-bottom-color: #5b9bd5; }
+  main { padding: 24px; flex: 1; }
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* DASHBOARD */
+  .cardsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 14px; margin-bottom: 22px; }
+  .card { background: #fff; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); border-left: 4px solid #5b9bd5; }
+  .card .cardLabel { font-size: 11px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .5px; }
+  .card .cardValue { font-size: 26px; font-weight: 700; color: #1e3c64; margin-top: 4px; }
+  .card.green  { border-left-color: #27ae60; } .card.green  .cardValue { color: #27ae60; }
+  .card.orange { border-left-color: #e67e22; } .card.orange .cardValue { color: #e67e22; }
+  .card.red    { border-left-color: #e74c3c; } .card.red    .cardValue { color: #e74c3c; }
+  .card.blue   { border-left-color: #2980b9; } .card.blue   .cardValue { color: #2980b9; }
+  .card.yellow { border-left-color: #f39c12; } .card.yellow .cardValue { color: #f39c12; }
+  .dashRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .dashSection { background: #fff; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .dashSection h3 { font-size: 13px; color: #666; margin-bottom: 14px; font-weight: 600; }
+  .barRow { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .barLabel { width: 120px; font-size: 12px; color: #444; white-space: nowrap; }
+  .barTrack { flex: 1; background: #eee; border-radius: 4px; height: 13px; overflow: hidden; }
+  .barFill { height: 100%; border-radius: 4px; transition: width .5s; }
+  .barCount { width: 28px; text-align: right; font-size: 12px; font-weight: 600; color: #333; }
+
+  /* TABELAS */
+  .tableToolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; gap: 10px; flex-wrap: wrap; }
+  .tableToolbar input { padding: 8px 12px; border: 1px solid #d0d7e3; border-radius: 6px; width: 300px; outline: none; }
+  .tableToolbar input:focus { border-color: #2a5298; }
+  .btnSuccess { background: #27ae60; color: #fff; font-weight: 600; }
+  .btnWarning { background: #e67e22; color: #fff; font-weight: 600; }
+  .btnDanger  { background: #c0392b; color: #fff; font-weight: 600; }
+  .tableWrap { background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); overflow: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th { background: #253a5e; color: #fff; padding: 11px 14px; text-align: left; font-weight: 600; white-space: nowrap; }
+  tbody tr { border-bottom: 1px solid #f0f2f5; }
+  tbody tr:hover { background: #f7f9fc; }
+  tbody td { padding: 10px 14px; vertical-align: middle; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+  .badge-ATIVO      { background: #d5f5e3; color: #1e8449; }
+  .badge-MANUTENCAO { background: #fdebd0; color: #b7770d; }
+  .badge-EMPRESTADO { background: #d6eaf8; color: #1a5276; }
+  .badge-BAIXADO    { background: #f2d7d5; color: #922b21; }
+  .badge-ABERTO        { background: #fef9e7; color: #b7770d; border: 1px solid #f9ca24; }
+  .badge-DEVOLVIDO     { background: #d5f5e3; color: #1e8449; }
+  .badge-TRANSFERENCIA { background: #e8daef; color: #6c3483; }
+  .badge-ADMIN      { background: #d5d8dc; color: #333; }
+  .badge-OPERADOR   { background: #d6eaf8; color: #1a5276; }
+  .actBtn { padding: 4px 10px; font-size: 12px; margin-right: 4px; border-radius: 4px; }
+  .btnEdit    { background: #2a5298; color: #fff; }
+  .btnDelete  { background: #e74c3c; color: #fff; }
+  .btnDevolve { background: #27ae60; color: #fff; }
+  .emptyRow td { text-align: center; color: #aaa; padding: 30px; }
+
+  /* ABAS INTERNAS */
+  .innerTabs { display: flex; gap: 6px; margin-bottom: 16px; }
+  .innerTab { background: #e9ecef; color: #555; font-size: 13px; padding: 6px 16px; border-radius: 20px; border: none; cursor: pointer; }
+  .innerTab.active { background: #253a5e; color: #fff; }
+
+  /* MODAL */
+  .overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 100; align-items: center; justify-content: center; }
+  .overlay.open { display: flex; }
+  .modal { background: #fff; border-radius: 12px; padding: 28px 30px; width: 520px; max-width: 95vw; max-height: 90vh; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,.25); }
+  .modal h3 { font-size: 16px; color: #1e3c64; margin-bottom: 8px; }
+  .bemInfo { background: #f0f7ff; border-radius: 8px; padding: 10px 14px; margin-bottom: 18px; font-size: 13px; color: #1a5276; line-height: 1.6; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .modalActions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+  .btnCancel    { background: #eee; color: #444; }
+  .btnSave      { background: #1e3c64; color: #fff; font-weight: 600; }
+  .btnSaveGreen { background: #27ae60; color: #fff; font-weight: 600; }
+
+  /* TOAST */
+  #toast { position: fixed; bottom: 24px; right: 24px; background: #323232; color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity .3s; z-index: 200; max-width: 340px; }
+  #toast.show    { opacity: 1; }
+  #toast.success { background: #27ae60; }
+  #toast.error   { background: #e74c3c; }
+
+  /* RELATÓRIOS */
+  .relCard { background:#fff; border-radius:10px; padding:24px 28px; box-shadow:0 1px 4px rgba(0,0,0,.08); max-width:680px; }
+  .relCard h3 { font-size:15px; color:#1e3c64; margin-bottom:18px; font-weight:700; }
+  .relGrid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0 16px; }
+  .relActions { display:flex; gap:12px; margin-top:20px; flex-wrap:wrap; }
+  .btnPdf   { background:#e74c3c; color:#fff; font-weight:600; padding:10px 22px; }
+  .btnExcel { background:#27ae60; color:#fff; font-weight:600; padding:10px 22px; }
+  .relLoading { display:none; align-items:center; gap:10px; color:#666; font-size:13px; margin-top:14px; }
+  .relLoading.show { display:flex; }
+  .spinner { width:18px; height:18px; border:3px solid #ddd; border-top-color:#2a5298; border-radius:50%; animation:spin .7s linear infinite; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  @media (max-width: 640px) {
+    .grid2 { grid-template-columns: 1fr; }
+    .dashRow { grid-template-columns: 1fr; }
+    .tableToolbar input { width: 100%; }
+    .relGrid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage">
+  <div class="loginCard">
+    <h1>🖥 Sistema Patrimonial</h1>
+    <p>Controle de Equipamentos e Periféricos</p>
+    <div class="formGroup"><label>Usuário</label><input id="loginInput" type="text" placeholder="seu.login" autocomplete="username"></div>
+    <div class="formGroup"><label>Senha</label><input id="senhaInput" type="password" placeholder="••••••••"></div>
+    <button class="btnPrimary" onclick="doLogin()">Entrar</button>
+    <p class="hint">Padrão: admin / admin123</p>
+    <p style="text-align:center;margin-top:14px">
+      <a href="#" onclick="mostrarEsqueciSenha()" style="color:#2a5298;font-size:12px;text-decoration:none">🔑 Esqueci minha senha</a>
+    </p>
+  </div>
+</div>
+
+<!-- MODAL ESQUECI SENHA -->
+<div class="overlay" id="modalEsqueciOverlay">
+  <div class="modal" style="width:420px">
+    <h3>🔑 Esqueci minha senha</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:18px">
+      Informe seu login e o e-mail cadastrado. Você receberá uma senha temporária.
+    </p>
+    <div class="formGroup"><label>Login</label><input id="esqLogin" type="text" placeholder="seu.login"></div>
+    <div class="formGroup"><label>E-mail cadastrado</label><input id="esqEmail" type="email" placeholder="seu@email.com"></div>
+    <div id="esqMsg" style="display:none;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px"></div>
+    <div class="modalActions">
+      <button class="btnCancel" onclick="fecharModal('modalEsqueciOverlay')">Cancelar</button>
+      <button class="btnSave" onclick="solicitarReset()">📧 Enviar senha temporária</button>
+    </div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="appPage">
+  <header>
+    <h2>🖥 Sistema Patrimonial</h2>
+    <div class="userInfo">
+      <span id="headerNome"></span>
+      <span class="badgePerfil" id="headerPerfil"></span>
+      <button class="btnLogout" onclick="doLogout()">Sair</button>
+    </div>
+  </header>
+  <nav>
+    <button class="navBtn active" onclick="showSection('dashboard',this)">📊 Dashboard</button>
+    <button class="navBtn" onclick="showSection('bens',this)">📦 Bens</button>
+    <button class="navBtn" onclick="showSection('movimentacoes',this)">🔄 Movimentações</button>
+    <button class="navBtn" id="navUsuarios" style="display:none" onclick="showSection('usuarios',this)">👤 Usuários</button>
+    <button class="navBtn" id="navRelatorios" style="display:none" onclick="showSection('relatorios',this)">📄 Relatórios</button>
+  </nav>
+  <main>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="section active">
+      <div class="cardsGrid" id="dashCards"></div>
+      <div class="dashRow">
+        <div class="dashSection"><h3>Por Categoria</h3><div id="barCategoria"></div></div>
+        <div class="dashSection"><h3>Por Status</h3><div id="barStatus"></div></div>
+      </div>
+    </div>
+
+    <!-- BENS -->
+    <div id="bens" class="section">
+      <div class="tableToolbar">
+        <input id="searchBens" type="text" placeholder="🔍  Buscar por nº, descrição, marca, responsável...">
+        <button class="btnSuccess" onclick="abrirModalBem()">+ Novo Bem</button>
+        <button class="btnDanger" onclick="removerTodosBens()">🗑️ Remover Todos</button>
+      </div>
+      <div class="tableWrap">
+        <table>
+          <thead><tr><th>Nº Patrimônio</th><th>Descrição</th><th>Categoria</th><th>Marca</th><th>Modelo</th><th>Nº Série</th><th>Nome da Máquina</th><th>Status</th><th>Setor</th><th>Localização</th><th>Responsável</th><th>Data Aquisição</th><th>Valor (R$)</th><th>Ações</th></tr></thead>
+          <tbody id="tabelaBens"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MOVIMENTAÇÕES -->
+    <div id="movimentacoes" class="section">
+      <div class="tableToolbar">
+        <div class="innerTabs">
+          <button class="innerTab active" onclick="switchMovTab('aberto',this)">🟡 Em Aberto <span id="badgeAberto"></span></button>
+          <button class="innerTab" onclick="switchMovTab('historico',this)">📋 Histórico Completo</button>
+          <button class="innerTab" onclick="switchMovTab('porEquipamento',this)">📍 Por Equipamento</button>
+          <button class="innerTab" onclick="switchMovTab('porSetor',this)">🏢 Por Setor</button>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btnWarning" onclick="abrirModalTransferencia()">🔄 Transferir Setor</button>
+          <button class="btnWarning" onclick="abrirModalSaida()">📤 Registrar Saída da DTI</button>
+        </div>
+      </div>
+
+      <div id="tabAberto">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center;">
+          <select id="filtroSetorAberto" onchange="filtrarAberto()" style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;outline:none;">
+            <option value="">Todos os setores</option>
+            <option value="DTI">DTI</option>
+            <option value="Administrativo">Administrativo</option>
+            <option value="Florestal">Florestal</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="RH">RH</option>
+            <option value="Diretoria">Diretoria</option>
+            <option value="Jurídico">Jurídico</option>
+            <option value="Comunicação">Comunicação</option>
+            <option value="Almoxarifado">Almoxarifado</option>
+            <option value="Auditório">Auditório</option>
+            <option value="Outro">Outro</option>
+          </select>
+          <span id="contadorAberto" style="font-size:13px;color:#555;"></span>
+          <button class="btnCancel" onclick="document.getElementById('filtroSetorAberto').value='';filtrarAberto();" style="padding:8px 14px;">✕ Limpar</button>
+        </div>
+        <div class="tableWrap">
+          <table>
+            <thead><tr><th>Bem</th><th>Qtd</th><th>Nº Chamado</th><th>Nome da Máquina</th><th>Quem Levou</th><th>Setor Anterior</th><th>Setor Atual</th><th>Saída em</th><th>Ação</th></tr></thead>
+            <tbody id="tabelaAberto"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tabHistorico" style="display:none">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <input id="filtroNumBem"    type="text" placeholder="🔍 Nº do Bem"         style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;width:180px;outline:none;" oninput="filtrarHistorico()">
+          <input id="filtroQuemLevou" type="text" placeholder="🔍 Quem levou"        style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;width:200px;outline:none;" oninput="filtrarHistorico()">
+          <input id="filtroMaquina"   type="text" placeholder="🔍 Nome da Máquina"   style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;width:200px;outline:none;" oninput="filtrarHistorico()">
+          <input id="filtroChamado"   type="text" placeholder="🔍 Nº do Chamado"     style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;width:190px;outline:none;" oninput="filtrarHistorico()">
+          <select id="filtroSituacao" onchange="filtrarHistorico()" style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;outline:none;">
+            <option value="">Todas as situações</option>
+            <option value="aberto">Em aberto</option>
+            <option value="devolvido">Devolvido</option>
+            <option value="transferido">Transferido</option>
+          </select>
+          <select id="filtroSetorHistorico" onchange="filtrarHistorico()" style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;outline:none;">
+            <option value="">Todos os setores</option>
+            <option value="DTI">DTI</option>
+            <option value="Administrativo">Administrativo</option>
+            <option value="Florestal">Florestal</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="RH">RH</option>
+            <option value="Diretoria">Diretoria</option>
+            <option value="Jurídico">Jurídico</option>
+            <option value="Comunicação">Comunicação</option>
+            <option value="Almoxarifado">Almoxarifado</option>
+            <option value="Auditório">Auditório</option>
+            <option value="Outro">Outro</option>
+          </select>
+          <button class="btnCancel" onclick="limparFiltrosHistorico()" style="padding:8px 14px;">✕ Limpar</button>
+        </div>
+        <div class="tableWrap">
+          <table>
+            <thead><tr><th>Bem</th><th>Qtd</th><th>Nº Chamado</th><th>Nome da Máquina</th><th>Quem Levou</th><th>Setor Anterior</th><th>Setor Atual</th><th>Saída</th><th>Devolução para DTI</th><th>Situação</th><th>Registrado por</th></tr></thead>
+            <tbody id="tabelaHistorico"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tabPorEquipamento" style="display:none">
+        <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px;flex-wrap:wrap;">
+          <select id="selectBemHistorico" onchange="carregarHistoricoBem()" style="padding:8px 12px;border:1px solid #d0d7e3;border-radius:6px;min-width:340px;outline:none;font-size:13px;">
+            <option value="">Selecione o equipamento para ver o histórico...</option>
+          </select>
+          <span id="setorAtualBemInfo" style="display:none;font-size:13px;background:#eaf2ff;color:#1a5276;padding:6px 14px;border-radius:6px;font-weight:600"></span>
+        </div>
+        <div class="tableWrap">
+          <table>
+            <thead><tr><th>Data</th><th>Tipo</th><th>Setor Anterior</th><th>Setor Atual</th><th>Responsável</th><th>Nº Chamado</th><th>Situação</th><th>Registrado por</th></tr></thead>
+            <tbody id="tabelaHistoricoBem"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="tabPorSetor" style="display:none">
+        <div id="conteudoPorSetor"></div>
+      </div>
+    </div>
+
+    <!-- RELATÓRIOS -->
+    <div id="relatorios" class="section">
+      <div class="relCard">
+        <h3>📄 Gerar Relatório de Bens Patrimoniais</h3>
+        <div class="relGrid">
+          <div class="formGroup">
+            <label>Categoria</label>
+            <select id="relCategoria">
+              <option value="">Todas as categorias</option>
+              <option value="NOTEBOOK">Notebook</option>
+              <option value="DESKTOP">Desktop</option>
+              <option value="DRONE">Drone</option>
+              <option value="MONITOR">Monitor</option>
+              <option value="IMPRESSORA">Impressora</option>
+              <option value="PERIFERICO">Periférico</option>
+              <option value="OUTRO">Outro</option>
+            </select>
+          </div>
+          <div class="formGroup">
+            <label>Responsável</label>
+            <input id="relResponsavel" type="text" placeholder="Nome do responsável...">
+          </div>
+          <div class="formGroup">
+            <label>CPF do Responsável</label>
+            <input id="relCpf" type="text" placeholder="000.000.000-00">
+          </div>
+          <div class="formGroup">
+            <label>Data de Aquisição — De</label>
+            <input id="relDataInicio" type="date">
+          </div>
+          <div class="formGroup">
+            <label>Data de Aquisição — Até</label>
+            <input id="relDataFim" type="date">
+          </div>
+        </div>
+        <div class="relActions">
+          <button class="btnPdf"   onclick="gerarRelatorio('pdf')">📥 Baixar PDF</button>
+          <button class="btnExcel" onclick="gerarRelatorio('excel')">📊 Baixar Excel</button>
+        </div>
+        <div class="relLoading" id="relLoading">
+          <div class="spinner"></div>
+          <span>Gerando relatório, aguarde...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- USUÁRIOS -->
+    <div id="usuarios" class="section">
+      <div class="tableToolbar">
+        <span style="font-size:14px;color:#555">Gerenciamento de Usuários (somente Admin)</span>
+        <button class="btnSuccess" onclick="abrirModalUsuario()">+ Novo Usuário</button>
+      </div>
+      <div class="tableWrap">
+        <table>
+          <thead><tr><th>Nome</th><th>Login</th><th>Perfil</th><th>Status</th><th>Ações</th></tr></thead>
+          <tbody id="tabelaUsuarios"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL SAÍDA -->
+<div class="overlay" id="modalSaidaOverlay">
+  <div class="modal">
+    <h3>📤 Registrar Saída de Equipamento</h3>
+    <div class="bemInfo" id="saidaBemInfo" style="display:none"></div>
+    <div class="formGroup">
+      <label>Bem Patrimonial *</label>
+      <select id="saidaBemId" onchange="atualizarInfoBem()"><option value="">Selecione o equipamento...</option></select>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Nome da Máquina</label><input id="saidaHostname" type="text" placeholder="Ex: SDDTIWST-001"></div>
+      <div class="formGroup"><label>Setor Atual</label><select id="saidaSetor"><option value="">Selecione o setor...</option></select></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Localização de Origem</label><input id="saidaOrigem" type="text" readonly style="background:#f5f7fa;color:#777;cursor:default"></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Nome de quem levou *</label><input id="saidaResponsavel" type="text" placeholder="Nome completo do funcionário"></div>
+      <div class="formGroup"><label>CPF de quem levou</label><input id="saidaCpf" type="text" placeholder="000.000.000-00"></div>
+    </div>
+    <div class="formGroup" style="width:120px"><label>Quantidade</label><input id="saidaQuantidade" type="number" min="1" value="1"></div>
+    <div class="formGroup"><label>Número do Chamado</label><input id="saidaNumeroChamado" type="text" placeholder="Ex: CHM-2024-00123"></div>
+    <div class="formGroup"><label>Observação</label><textarea id="saidaObs" rows="2" placeholder="Informações adicionais..."></textarea></div>
+    <div class="modalActions">
+      <button class="btnCancel" onclick="fecharModal('modalSaidaOverlay')">Cancelar</button>
+      <button class="btnSaveGreen" onclick="salvarSaida()">📤 Confirmar Saída</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TRANSFERÊNCIA DE SETOR -->
+<div class="overlay" id="modalTransferenciaOverlay">
+  <div class="modal">
+    <h3>🔄 Transferir Setor</h3>
+    <div class="formGroup">
+      <label>Bem Patrimonial *</label>
+      <select id="transferenciaBemId" onchange="atualizarInfoBemTransferencia()"><option value="">Selecione o equipamento...</option></select>
+    </div>
+    <div class="bemInfo" id="transferenciaBemInfo" style="display:none"></div>
+    <div class="grid2">
+      <div class="formGroup"><label>Setor Atual</label><input id="transferenciaSetorAtual" type="text" readonly style="background:#f5f7fa;color:#777;cursor:default"></div>
+      <div class="formGroup"><label>Setor Destino *</label><select id="transferenciaSetorDestino"><option value="">Selecione o setor...</option></select></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Responsável *</label><input id="transferenciaResponsavel" type="text" placeholder="Nome do responsável pela transferência"></div>
+      <div class="formGroup"><label>CPF</label><input id="transferenciaCpf" type="text" placeholder="000.000.000-00"></div>
+    </div>
+    <div class="formGroup"><label>Nova Localização</label><input id="transferenciaLocalizacao" type="text" placeholder="Ex: Sala 203, 2º andar..."></div>
+    <div class="formGroup"><label>Observação</label><textarea id="transferenciaObs" rows="2" placeholder="Motivo da transferência..."></textarea></div>
+    <div class="modalActions">
+      <button class="btnCancel" onclick="fecharModal('modalTransferenciaOverlay')">Cancelar</button>
+      <button class="btnSaveGreen" onclick="salvarTransferencia()">🔄 Confirmar Transferência</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DEVOLUÇÃO -->
+<div class="overlay" id="modalDevolucaoOverlay">
+  <div class="modal">
+    <h3>📥 Registrar Devolução</h3>
+    <input type="hidden" id="devMovId">
+    <div class="bemInfo" id="devBemInfo"></div>
+    <div class="formGroup"><label>Observação da devolução</label><textarea id="devObs" rows="2" placeholder="Ex: Devolvido em bom estado, faltando cabo..."></textarea></div>
+    <div class="modalActions">
+      <button class="btnCancel" onclick="fecharModal('modalDevolucaoOverlay')">Cancelar</button>
+      <button class="btnSaveGreen" onclick="salvarDevolucao()">📥 Confirmar Devolução</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL BEM -->
+<div class="overlay" id="modalBemOverlay">
+  <div class="modal">
+    <h3 id="modalBemTitulo">Novo Bem Patrimonial</h3>
+    <input type="hidden" id="bemId">
+    <div class="grid2">
+      <div class="formGroup"><label>Nº Patrimônio *</label><input id="bemNumero" type="text" placeholder="PAT-0001"></div>
+      <div class="formGroup"><label>Categoria *</label>
+        <select id="bemCategoria"><option value="">Selecione...</option><option>NOTEBOOK</option><option>DESKTOP</option><option>DRONE</option><option>MONITOR</option><option>IMPRESSORA</option><option>PERIFERICO</option><option>OUTRO</option></select>
+      </div>
+    </div>
+    <div class="formGroup"><label>Descrição *</label><input id="bemDescricao" type="text"></div>
+    <div class="grid2">
+      <div class="formGroup"><label>Marca</label><input id="bemMarca" type="text"></div>
+      <div class="formGroup"><label>Modelo</label><input id="bemModelo" type="text"></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Número de Série</label><input id="bemSerie" type="text"></div>
+      <div class="formGroup"><label>Nome da Máquina</label><input id="bemHostname" type="text" placeholder="Ex: SDDTIWST-001"></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Status</label>
+        <select id="bemStatus"><option value="ATIVO">Ativo</option><option value="MANUTENCAO">Manutenção</option><option value="EMPRESTADO">Emprestado</option><option value="BAIXADO">Baixado</option></select>
+      </div>
+      <div class="formGroup"><label>Setor</label><select id="bemSetor"><option value="">Selecione o setor...</option></select></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Responsável</label><input id="bemResponsavel" type="text"></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>CPF do Responsável</label><input id="bemResponsavelCpf" type="text" placeholder="000.000.000-00"></div>
+      <div class="formGroup"><label>E-mail do Responsável</label><input id="bemResponsavelEmail" type="email" placeholder="nome@email.com"></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Telefone do Responsável</label><input id="bemResponsavelTelefone" type="text" placeholder="(00) 00000-0000"></div>
+      <div class="formGroup"><label>Data de Aquisição</label><input id="bemDataAquisicao" type="date"></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Valor (R$)</label><input id="bemValor" type="number" step="0.01"></div>
+      <div class="formGroup"></div>
+    </div>
+    <div class="formGroup"><label>Observações</label><textarea id="bemObs" rows="2"></textarea></div>
+    <div class="modalActions">
+      <button class="btnCancel" onclick="fecharModal('modalBemOverlay')">Cancelar</button>
+      <button class="btnSave" onclick="salvarBem()">💾 Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL USUÁRIO -->
+<div class="overlay" id="modalUsuarioOverlay">
+  <div class="modal">
+    <h3 id="modalUsuarioTitulo">Novo Usuário</h3>
+    <input type="hidden" id="usuarioId">
+    <div class="formGroup"><label>Nome Completo *</label><input id="usuarioNome" type="text"></div>
+    <div class="formGroup"><label>E-mail (para recuperação de senha)</label><input id="usuarioEmail" type="email" placeholder="usuario@email.com"></div>
+    <div class="grid2">
+      <div class="formGroup"><label>Login *</label><input id="usuarioLogin" type="text"></div>
+      <div class="formGroup"><label>Perfil</label><select id="usuarioPerfil"><option value="OPERADOR">Operador</option><option value="ADMIN">Administrador</option></select></div>
+    </div>
+    <div class="grid2">
+      <div class="formGroup"><label>Senha <span id="senhaObrigatorio">*</span></label><input id="usuarioSenha" type="password"></div>
+      <div class="formGroup" id="grupoAtivo" style="display:none"><label>Status</label><select id="usuarioAtivo"><option value="true">Ativo</option><option value="false">Inativo</option></select></div>
+    </div>
+    <div class="modalActions">
+      <button class="btnCancel" onclick="fecharModal('modalUsuarioOverlay')">Cancelar</button>
+      <button class="btnSave" onclick="salvarUsuario()">💾 Salvar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+let usuarioLogado = null, bensData = [], usuariosData = [];
+
+const api = async (m, p, b) => {
+  const o = {method:m, headers:{'Content-Type':'application/json'}, credentials:'include'};
+  if (b) o.body = JSON.stringify(b);
+  const r = await fetch(p, o);
+  if (r.status === 204) return null;
+  const d = await r.json().catch(()=>({}));
+  if (!r.ok) throw new Error(d.erro || d.message || 'Erro');
+  return d;
+};
+const GET  = p    => api('GET',    p);
+const POST = (p,b)=> api('POST',   p, b);
+const PUT  = (p,b)=> api('PUT',    p, b);
+const DEL  = p    => api('DELETE', p);
+
+// AUTH
+async function doLogin() {
+  const login = document.getElementById('loginInput').value.trim();
+  const senha = document.getElementById('senhaInput').value;
+  if (!login||!senha) return toast('Preencha login e senha','error');
+  try { usuarioLogado = await POST('/api/auth/login',{login,senha}); iniciarApp(); }
+  catch(e) { toast(e.message,'error'); }
+}
+async function doLogout() {
+  await fetch('/api/auth/logout',{method:'POST',credentials:'include'});
+  location.reload();
+}
+window.addEventListener('load', async()=>{ try { usuarioLogado=await GET('/api/auth/me'); iniciarApp(); } catch{} });
+document.getElementById('senhaInput').addEventListener('keydown',e=>{ if(e.key==='Enter') doLogin(); });
+document.getElementById('loginInput').addEventListener('keydown',e=>{ if(e.key==='Enter') document.getElementById('senhaInput').focus(); });
+
+function iniciarApp() {
+  document.getElementById('loginPage').style.display = 'none';
+  document.getElementById('appPage').style.display   = 'flex';
+  document.getElementById('headerNome').textContent   = usuarioLogado.nome;
+  document.getElementById('headerPerfil').textContent = usuarioLogado.perfil;
+  if (usuarioLogado.perfil==='ADMIN') {
+    document.getElementById('navUsuarios').style.display='';
+    document.getElementById('navRelatorios').style.display='';
+  }
+  carregarDashboard(); carregarBens(); carregarMovAberto(); carregarSetores();
+  if (usuarioLogado.perfil==='ADMIN') carregarUsuarios();
+}
+
+// NAV
+function showSection(id, btn) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.navBtn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  if (id==='dashboard') carregarDashboard();
+  if (id==='movimentacoes') carregarMovAberto();
+}
+
+// DASHBOARD
+async function carregarDashboard() {
+  try {
+    const [d, rm] = await Promise.all([GET('/api/bens/dashboard'), GET('/api/movimentacoes/resumo')]);
+    const valor = parseFloat(d.valorTotal)||0;
+    document.getElementById('dashCards').innerHTML = `
+      <div class="card blue">  <div class="cardLabel">Total de Bens</div>   <div class="cardValue">${d.totalBens}</div></div>
+      <div class="card">       <div class="cardLabel">Valor Total</div>     <div class="cardValue" style="font-size:17px">${fmtValor(valor)}</div></div>
+      <div class="card green"> <div class="cardLabel">✅ Ativos</div>       <div class="cardValue">${d.porStatus['ATIVO']||0}</div></div>
+      <div class="card orange"><div class="cardLabel">🔧 Manutenção</div>   <div class="cardValue">${d.porStatus['MANUTENCAO']||0}</div></div>
+      <div class="card red">   <div class="cardLabel">❌ Baixados</div>     <div class="cardValue">${d.porStatus['BAIXADO']||0}</div></div>
+      <div class="card yellow"><div class="cardLabel">📤 Fora da sala</div> <div class="cardValue">${rm.emAberto||0}</div></div>`;
+    const cl={NOTEBOOK:'Notebook',DESKTOP:'Desktop',DRONE:'Drone',MONITOR:'Monitor',IMPRESSORA:'Impressora',PERIFERICO:'Periférico',OUTRO:'Outro'};
+    const mc=Math.max(...Object.values(d.porCategoria),1);
+    document.getElementById('barCategoria').innerHTML=Object.entries(d.porCategoria).map(([k,v])=>barRow(cl[k]||k,v,mc,'#2a5298')).join('');
+    const sl={ATIVO:'Ativo',MANUTENCAO:'Manutenção',EMPRESTADO:'Emprestado',BAIXADO:'Baixado'};
+    const sc={ATIVO:'#27ae60',MANUTENCAO:'#e67e22',EMPRESTADO:'#2980b9',BAIXADO:'#e74c3c'};
+    const ms=Math.max(...Object.values(d.porStatus),1);
+    document.getElementById('barStatus').innerHTML=Object.entries(d.porStatus).map(([k,v])=>barRow(sl[k]||k,v,ms,sc[k]||'#999')).join('');
+  } catch(e) { toast('Erro dashboard','error'); }
+}
+const barRow=(l,v,m,c)=>`<div class="barRow"><span class="barLabel">${l}</span><div class="barTrack"><div class="barFill" style="width:${m>0?(v/m*100).toFixed(1):0}%;background:${c}"></div></div><span class="barCount">${v}</span></div>`;
+
+// SETORES
+async function carregarSetores() {
+  try {
+    const enums = await GET('/api/bens/enums');
+    const setores = enums.setores || [];
+    ['saidaSetor', 'transferenciaSetorDestino', 'bemSetor'].forEach(id => {
+      const sel = document.getElementById(id);
+      sel.innerHTML = '<option value="">Selecione o setor...</option>';
+      setores.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o); });
+    });
+  } catch(e) { console.error('Erro ao carregar setores', e); }
+}
+
+// BENS
+async function carregarBens(q='') {
+  try { bensData=await GET('/api/bens'+(q?`?q=${encodeURIComponent(q)}`:'')); renderBens(bensData); }
+  catch(e) { toast('Erro bens','error'); }
+}
+function renderBens(lista) {
+  const tb=document.getElementById('tabelaBens');
+  if (!lista.length) { tb.innerHTML='<tr class="emptyRow"><td colspan="14">Nenhum bem encontrado</td></tr>'; return; }
+  tb.innerHTML=lista.map(b=>`<tr>
+    <td><strong>${b.numeroPatrimonio}</strong></td>
+    <td>${b.descricao}</td>
+    <td>${fmtCat(b.categoria)}</td>
+    <td>${b.marca||'—'}</td>
+    <td>${b.modelo||'—'}</td>
+    <td>${b.numeroSerie||'—'}</td>
+    <td>${b.hostname||'—'}</td>
+    <td><span class="badge badge-${b.status}">${fmtStatus(b.status)}</span></td>
+    <td>${b.setor||'—'}</td>
+    <td>${b.localizacao||'—'}</td>
+    <td>${b.responsavel||'—'}</td>
+    <td>${b.dataAquisicao||'—'}</td>
+    <td>${b.valor!=null?'R$ '+Number(b.valor).toFixed(2).replace('.',','):'—'}</td>
+    <td><button class="actBtn btnEdit" onclick="editarBem(${b.id})">✏️ Editar</button>
+        <button class="actBtn btnDelete" onclick="excluirBem(${b.id},'${esc(b.numeroPatrimonio)}')">🗑️ Excluir</button></td>
+  </tr>`).join('');
+}
+let st; document.getElementById('searchBens').addEventListener('input',e=>{ clearTimeout(st); st=setTimeout(()=>carregarBens(e.target.value),350); });
+
+function abrirModalBem(b=null) {
+  document.getElementById('modalBemTitulo').textContent=b?'Editar Bem':'Novo Bem Patrimonial';
+  ['bemId','bemNumero','bemDescricao','bemCategoria','bemMarca','bemModelo','bemSerie','bemHostname','bemStatus','bemSetor','bemResponsavel','bemResponsavelCpf','bemResponsavelEmail','bemResponsavelTelefone','bemDataAquisicao','bemValor','bemObs'].forEach(id=>{
+    const el=document.getElementById(id);
+    const map={bemId:'id',bemNumero:'numeroPatrimonio',bemDescricao:'descricao',bemCategoria:'categoria',bemMarca:'marca',bemModelo:'modelo',bemSerie:'numeroSerie',bemHostname:'hostname',bemStatus:'status',bemSetor:'setor',bemLocalizacao:'localizacao',bemResponsavel:'responsavel',bemResponsavelCpf:'responsavelCpf',bemResponsavelEmail:'responsavelEmail',bemResponsavelTelefone:'responsavelTelefone',bemDataAquisicao:'dataAquisicao',bemValor:'valor',bemObs:'observacoes'};
+    el.value=b&&b[map[id]]!=null?b[map[id]]:'';
+  });
+  if (!b) { document.getElementById('bemStatus').value='ATIVO'; document.getElementById('bemSetor').value='DTI'; }
+  const setorEl = document.getElementById('bemSetor');
+  const emprestado = b && b.status === 'EMPRESTADO';
+  setorEl.disabled = emprestado;
+  setorEl.title = emprestado ? 'Setor bloqueado: bem possui saída em aberto' : '';
+  abrirModal('modalBemOverlay');
+}
+function editarBem(id){ const b=bensData.find(x=>x.id===id); if(b) abrirModalBem(b); }
+async function salvarBem() {
+  const id=document.getElementById('bemId').value;
+  const bem={numeroPatrimonio:document.getElementById('bemNumero').value.trim(),descricao:document.getElementById('bemDescricao').value.trim(),categoria:document.getElementById('bemCategoria').value,marca:document.getElementById('bemMarca').value.trim(),modelo:document.getElementById('bemModelo').value.trim(),numeroSerie:document.getElementById('bemSerie').value.trim(),hostname:document.getElementById('bemHostname').value.trim()||null,status:document.getElementById('bemStatus').value,setor:document.getElementById('bemSetor').value.trim()||null,responsavel:document.getElementById('bemResponsavel').value.trim(),responsavelCpf:document.getElementById('bemResponsavelCpf').value.trim()||null,responsavelEmail:document.getElementById('bemResponsavelEmail').value.trim()||null,responsavelTelefone:document.getElementById('bemResponsavelTelefone').value.trim()||null,dataAquisicao:document.getElementById('bemDataAquisicao').value||null,valor:parseFloat(document.getElementById('bemValor').value)||null,observacoes:document.getElementById('bemObs').value.trim()};
+  if (!bem.numeroPatrimonio) return toast('Nº patrimônio obrigatório','error');
+  if (!bem.descricao) return toast('Descrição obrigatória','error');
+  if (!bem.categoria) return toast('Selecione a categoria','error');
+  try { if(id) await PUT(`/api/bens/${id}`,bem); else await POST('/api/bens',bem); fecharModal('modalBemOverlay'); carregarBens(); toast(id?'Bem atualizado!':'Bem cadastrado!','success'); } catch(e) { toast(e.message,'error'); }
+}
+async function excluirBem(id,n) {
+  if (!confirm(`Excluir "${n}"?`)) return;
+  try { await DEL(`/api/bens/${id}`); carregarBens(); toast('Bem excluído!','success'); } catch(e) { toast(e.message,'error'); }
+}
+async function removerTodosBens() {
+  if (!confirm('Atenção: esta ação removerá TODOS os bens e todo o histórico de movimentações permanentemente. Deseja continuar?')) return;
+  if (!confirm('Confirmação final: tem certeza absoluta?')) return;
+  try { await DEL('/api/bens'); carregarBens(); toast('Todos os bens foram removidos.','success'); } catch(e) { toast(e.message,'error'); }
+}
+
+// MOVIMENTAÇÕES
+let movAbertoData=[];
+async function carregarMovAberto() {
+  try {
+    movAbertoData=await GET('/api/movimentacoes/em-aberto');
+    const b=document.getElementById('badgeAberto');
+    b.textContent=movAbertoData.length>0?`(${movAbertoData.length})`:'';
+    filtrarAberto();
+  } catch(e) { toast('Erro movimentações','error'); }
+}
+function filtrarAberto() {
+  const setor=(document.getElementById('filtroSetorAberto').value||'').toLowerCase();
+  const lista=setor
+    ? movAbertoData.filter(m=>(m.setorAtual||m.destino||'').toLowerCase().includes(setor))
+    : movAbertoData;
+  const contador=document.getElementById('contadorAberto');
+  if (setor) contador.textContent=`${lista.length} equipamento(s) encontrado(s)`;
+  else contador.textContent='';
+  renderAberto(lista);
+}
+function renderAberto(lista) {
+  const tb=document.getElementById('tabelaAberto');
+  if (!lista.length) { tb.innerHTML='<tr class="emptyRow"><td colspan="9">✅ Todos os equipamentos estão na sala</td></tr>'; return; }
+  tb.innerHTML=lista.map(m=>`<tr>
+    <td><strong>${m.bem.numeroPatrimonio}</strong><br><span style="color:#777;font-size:12px">${m.bem.descricao}</span></td>
+    <td style="text-align:center">${m.quantidade}</td>
+    <td>${m.numeroChamado||'—'}</td>
+    <td>${m.bem.hostname||'—'}</td>
+    <td>${m.responsavelRetirada}</td>
+    <td>${m.setorAnterior||m.localOrigem||'—'}</td>
+    <td>${m.setorAtual||m.destino||'—'}</td>
+    <td style="white-space:nowrap">${fmtDt(m.dataSaida)}</td>
+    <td><button class="actBtn btnDevolve" onclick="abrirDev(${m.id},'${esc(m.bem.numeroPatrimonio)}','${esc(m.bem.descricao)}','${esc(m.responsavelRetirada)}','${esc(m.setorAtual||m.destino||'')}')">📥 Encaminhar para DTI </button></td>
+  </tr>`).join('');
+}
+
+let historicoData=[];
+async function carregarHistorico() {
+  try { historicoData=await GET('/api/movimentacoes'); filtrarHistorico(); }
+  catch(e) { toast('Erro histórico','error'); }
+}
+function filtrarHistorico() {
+  const numBem   =(document.getElementById('filtroNumBem').value||'').toLowerCase().trim();
+  const quem     =(document.getElementById('filtroQuemLevou').value||'').toLowerCase().trim();
+  const maquina  =(document.getElementById('filtroMaquina').value||'').toLowerCase().trim();
+  const chamado  =(document.getElementById('filtroChamado').value||'').toLowerCase().trim();
+  const situacao = document.getElementById('filtroSituacao').value;
+  const setor    =(document.getElementById('filtroSetorHistorico').value||'').toLowerCase();
+  const lista=historicoData.filter(m=>
+    (!numBem   || (m.bem.numeroPatrimonio||'').toLowerCase().includes(numBem)) &&
+    (!quem     || (m.responsavelRetirada||'').toLowerCase().includes(quem)) &&
+    (!maquina  || (m.bem.hostname||'').toLowerCase().includes(maquina)) &&
+    (!chamado  || (m.numeroChamado||'').toLowerCase().includes(chamado)) &&
+    (!situacao || (situacao==='devolvido' ? !!m.dataDevolucao : situacao==='transferido' ? m.tipo==='TRANSFERENCIA' : !m.dataDevolucao && m.tipo!=='TRANSFERENCIA')) &&
+    (!setor    || (m.setorAtual||m.destino||'').toLowerCase()===setor || (m.setorAnterior||m.localOrigem||'').toLowerCase()===setor)
+  );
+  renderHistorico(lista);
+}
+function limparFiltrosHistorico() {
+  ['filtroNumBem','filtroQuemLevou','filtroMaquina','filtroChamado','filtroSituacao','filtroSetorHistorico'].forEach(id=>document.getElementById(id).value='');
+  renderHistorico(historicoData);
+}
+function renderHistorico(lista) {
+  const tb=document.getElementById('tabelaHistorico');
+  if (!lista.length) { tb.innerHTML='<tr class="emptyRow"><td colspan="11">Nenhuma movimentação encontrada</td></tr>'; return; }
+  tb.innerHTML=lista.map(m=>{
+    const badgeClass=m.tipo==='TRANSFERENCIA'?'badge-TRANSFERENCIA':m.dataDevolucao?'badge-DEVOLVIDO':'badge-ABERTO';
+    const badgeLabel=m.tipo==='TRANSFERENCIA'?'Transferido':m.dataDevolucao?'Devolvido':'Em aberto';
+    return `<tr>
+    <td><strong>${m.bem.numeroPatrimonio}</strong><br><span style="color:#777;font-size:12px">${m.bem.descricao}</span></td>
+    <td style="text-align:center">${m.quantidade}</td>
+    <td>${m.numeroChamado||'—'}</td>
+    <td>${m.bem.hostname||'—'}</td>
+    <td>${m.responsavelRetirada}</td>
+    <td>${m.setorAnterior||m.localOrigem||'—'}</td>
+    <td>${m.setorAtual||m.destino||'—'}</td>
+    <td style="white-space:nowrap">${fmtDt(m.dataSaida)}</td>
+    <td style="white-space:nowrap">${m.dataDevolucao?fmtDt(m.dataDevolucao):'—'}</td>
+    <td><span class="badge ${badgeClass}">${badgeLabel}</span></td>
+    <td style="font-size:12px;color:#777">${m.usuarioSaida||'—'}</td>
+  </tr>`;
+  }).join('');
+}
+
+function switchMovTab(tab, btn) {
+  document.querySelectorAll('.innerTab').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  document.getElementById('tabAberto').style.display         = tab==='aberto'        ?'':'none';
+  document.getElementById('tabHistorico').style.display      = tab==='historico'     ?'':'none';
+  document.getElementById('tabPorEquipamento').style.display = tab==='porEquipamento'?'':'none';
+  document.getElementById('tabPorSetor').style.display       = tab==='porSetor'      ?'':'none';
+  if (tab==='historico')      carregarHistorico();
+  if (tab==='porEquipamento') popularSelectBemHistorico();
+  if (tab==='porSetor')       carregarPorSetor();
+}
+
+async function carregarPorSetor() {
+  const container = document.getElementById('conteudoPorSetor');
+  container.innerHTML = '<p style="text-align:center;color:#777;padding:40px">Carregando...</p>';
+  try {
+    const lista = await GET('/api/movimentacoes/em-aberto');
+    // atualiza movAbertoData também para manter sincronia
+    movAbertoData = lista;
+
+    if (!lista.length) {
+      container.innerHTML = '<p style="text-align:center;color:#777;padding:40px">✅ Nenhum equipamento fora da DTI no momento.</p>';
+      return;
+    }
+
+    const grupos = {};
+    for (const m of lista) {
+      const setor = (m.setorAtual || m.destino || 'Não informado').trim();
+      if (!grupos[setor]) grupos[setor] = [];
+      grupos[setor].push(m);
+    }
+
+    const setoresOrdenados = Object.keys(grupos).sort();
+    container.innerHTML = setoresOrdenados.map(setor => {
+      const itens = grupos[setor];
+      const linhas = itens.map(m => `
+        <tr>
+          <td><strong>${m.bem.numeroPatrimonio}</strong><br><span style="color:#777;font-size:12px">${m.bem.descricao}</span></td>
+          <td>${m.bem.hostname||'—'}</td>
+          <td>${m.responsavelRetirada}</td>
+          <td>${m.numeroChamado||'—'}</td>
+          <td style="white-space:nowrap">${fmtDt(m.dataSaida)}</td>
+          <td><button class="actBtn btnDevolve" onclick="abrirDev(${m.id},'${esc(m.bem.numeroPatrimonio)}','${esc(m.bem.descricao)}','${esc(m.responsavelRetirada)}','${esc(m.setorAtual||m.destino||'')}')">📥 Devolver</button></td>
+        </tr>`).join('');
+      return `
+        <div style="margin-bottom:24px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+            <h3 style="font-size:15px;color:#1e3c64;font-weight:700;">🏢 ${setor}</h3>
+            <span style="background:#2a5298;color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:12px;">${itens.length} equipamento(s)</span>
+          </div>
+          <div class="tableWrap">
+            <table>
+              <thead><tr><th>Bem</th><th>Nome da Máquina</th><th>Responsável</th><th>Nº Chamado</th><th>Saída em</th><th>Ação</th></tr></thead>
+              <tbody>${linhas}</tbody>
+            </table>
+          </div>
+        </div>`;
+    }).join('');
+  } catch(e) { container.innerHTML = '<p style="text-align:center;color:#c0392b;padding:40px">Erro ao carregar dados.</p>'; }
+}
+
+function popularSelectBemHistorico() {
+  const sel = document.getElementById('selectBemHistorico');
+  if (sel.options.length > 1) return;
+  bensData.slice().sort((a,b)=>a.numeroPatrimonio.localeCompare(b.numeroPatrimonio)).forEach(b=>{
+    const o = document.createElement('option');
+    o.value = b.id; o.textContent = `${b.numeroPatrimonio} — ${b.descricao}`;
+    o.dataset.setor = b.setor||''; sel.appendChild(o);
+  });
+}
+
+async function carregarHistoricoBem() {
+  const sel = document.getElementById('selectBemHistorico');
+  const infoEl = document.getElementById('setorAtualBemInfo');
+  const tb = document.getElementById('tabelaHistoricoBem');
+  if (!sel.value) { tb.innerHTML=''; infoEl.style.display='none'; return; }
+  const setor = sel.options[sel.selectedIndex].dataset.setor;
+  infoEl.textContent = setor ? `Setor atual: ${setor}` : 'Setor não definido';
+  infoEl.style.display = '';
+  try {
+    const lista = await GET(`/api/movimentacoes/bem/${sel.value}`);
+    renderHistoricoBem(lista);
+  } catch(e) { toast('Erro ao carregar histórico do equipamento','error'); }
+}
+
+function renderHistoricoBem(lista) {
+  const tb = document.getElementById('tabelaHistoricoBem');
+  if (!lista.length) { tb.innerHTML='<tr class="emptyRow"><td colspan="8">Nenhuma movimentação registrada para este equipamento</td></tr>'; return; }
+  tb.innerHTML = lista.map(m=>{
+    const tipo = m.tipo==='TRANSFERENCIA'?'🔄 Transferência':m.tipo==='SAIDA'?'📤 Saída':'📥 Devolução';
+    const badgeClass = m.tipo==='TRANSFERENCIA'?'badge-TRANSFERENCIA':m.dataDevolucao?'badge-DEVOLVIDO':'badge-ABERTO';
+    const badgeLabel = m.tipo==='TRANSFERENCIA'?'Transferido':m.dataDevolucao?'Devolvido':'Em aberto';
+    return `<tr>
+      <td style="white-space:nowrap">${fmtDt(m.dataSaida)}</td>
+      <td>${tipo}</td>
+      <td>${m.setorAnterior||m.localOrigem||'—'}</td>
+      <td>${m.setorAtual||m.destino||'—'}</td>
+      <td>${m.responsavelRetirada||'—'}</td>
+      <td>${m.numeroChamado||'—'}</td>
+      <td><span class="badge ${badgeClass}">${badgeLabel}</span></td>
+      <td style="font-size:12px;color:#777">${m.usuarioSaida||'—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function abrirModalTransferencia() {
+  const sel = document.getElementById('transferenciaBemId');
+  sel.innerHTML = '<option value="">Selecione o equipamento...</option>';
+  bensData.filter(b=>b.status!=='BAIXADO')
+    .sort((a,b)=>a.numeroPatrimonio.localeCompare(b.numeroPatrimonio))
+    .forEach(b=>{ const o=document.createElement('option'); o.value=b.id; o.textContent=`${b.numeroPatrimonio} — ${b.descricao}`; o.dataset.setor=b.setor||''; o.dataset.hostname=b.hostname||''; sel.appendChild(o); });
+  ['transferenciaSetorAtual','transferenciaSetorDestino','transferenciaResponsavel','transferenciaCpf','transferenciaLocalizacao','transferenciaObs'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('transferenciaBemInfo').style.display='none';
+  abrirModal('modalTransferenciaOverlay');
+}
+
+function atualizarInfoBemTransferencia() {
+  const sel = document.getElementById('transferenciaBemId');
+  const infoEl = document.getElementById('transferenciaBemInfo');
+  if (!sel.value) { infoEl.style.display='none'; document.getElementById('transferenciaSetorAtual').value=''; return; }
+  const opt = sel.options[sel.selectedIndex];
+  document.getElementById('transferenciaSetorAtual').value = opt.dataset.setor;
+  infoEl.style.display='';
+  infoEl.innerHTML=`<strong>${opt.textContent}</strong>${opt.dataset.hostname?' | '+opt.dataset.hostname:''}${opt.dataset.setor?' | Setor: '+opt.dataset.setor:''}`;
+}
+
+async function salvarTransferencia() {
+  const bemId = document.getElementById('transferenciaBemId').value;
+  const setorDestino = document.getElementById('transferenciaSetorDestino').value.trim();
+  const responsavel = document.getElementById('transferenciaResponsavel').value.trim();
+  const cpf = document.getElementById('transferenciaCpf').value.trim()||null;
+  const localizacao = document.getElementById('transferenciaLocalizacao').value.trim()||null;
+  const obs = document.getElementById('transferenciaObs').value.trim()||null;
+  if (!bemId) return toast('Selecione o bem','error');
+  if (!setorDestino) return toast('Informe o setor de destino','error');
+  if (!responsavel) return toast('Informe o responsável','error');
+  try {
+    await POST('/api/movimentacoes/transferencia',{bemId,setorDestino,responsavel,cpf,localizacao,obs});
+    fecharModal('modalTransferenciaOverlay');
+    carregarMovAberto(); carregarBens();
+    // Atualiza dataset do select de histórico se estiver na aba
+    document.getElementById('selectBemHistorico').innerHTML='<option value="">Selecione o equipamento para ver o histórico...</option>';
+    toast('Transferência registrada!','success');
+  } catch(e) { toast(e.message||'Erro ao transferir','error'); }
+}
+
+async function abrirModalSaida() {
+  const sel=document.getElementById('saidaBemId');
+  sel.innerHTML='<option value="">Selecione o equipamento...</option>';
+  const bens=await GET('/api/bens').catch(()=>[]);
+  bens.filter(b=>b.status==='ATIVO').forEach(b=>{ const o=document.createElement('option'); o.value=b.id; o.textContent=`${b.numeroPatrimonio} — ${b.descricao}`; sel.appendChild(o); });
+  ['saidaResponsavel','saidaCpf','saidaOrigem','saidaNumeroChamado','saidaObs','saidaHostname','saidaSetor'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('saidaQuantidade').value='1';
+  document.getElementById('saidaBemInfo').style.display='none';
+  abrirModal('modalSaidaOverlay');
+}
+function atualizarInfoBem() {
+  const id=document.getElementById('saidaBemId').value;
+  const el=document.getElementById('saidaBemInfo');
+  if (!id) {
+    el.style.display='none';
+    document.getElementById('saidaHostname').value='';
+    document.getElementById('saidaSetor').value='';
+    return;
+  }
+  const b=bensData.find(x=>x.id==id);
+  if (b) {
+    el.style.display=''; el.textContent=`📦 ${b.descricao} | Categoria: ${fmtCat(b.categoria)} | Local: ${b.localizacao||'não informado'}`;
+    document.getElementById('saidaHostname').value=b.hostname||'';
+    document.getElementById('saidaSetor').value=b.setor||'';
+    document.getElementById('saidaOrigem').value=b.localizacao||'';
+  }
+}
+async function salvarSaida() {
+  const bemId=document.getElementById('saidaBemId').value;
+  const responsavelRetirada=document.getElementById('saidaResponsavel').value.trim();
+  const cpfRetirada=document.getElementById('saidaCpf').value.trim()||null;
+  const quantidade=parseInt(document.getElementById('saidaQuantidade').value)||1;
+  const numeroChamado=document.getElementById('saidaNumeroChamado').value.trim()||null;
+  const obs=document.getElementById('saidaObs').value.trim();
+  const hostname=document.getElementById('saidaHostname').value.trim()||null;
+  const setor=document.getElementById('saidaSetor').value.trim()||null;
+  const localOrigem=document.getElementById('saidaOrigem').value.trim()||null;
+  if (!bemId) return toast('Selecione o bem','error');
+  if (!responsavelRetirada) return toast('Informe quem levou','error');
+  try {
+    await POST('/api/movimentacoes/saida',{bemId,responsavelRetirada,cpfRetirada,localOrigem,quantidade,numeroChamado,obs,hostname,setor});
+    fecharModal('modalSaidaOverlay'); carregarMovAberto(); carregarBens();
+    toast('Saída registrada!','success');
+  } catch(e) { toast(e.message,'error'); }
+}
+
+function abrirDev(movId,numero,descricao,responsavel,destino) {
+  document.getElementById('devMovId').value=movId;
+  document.getElementById('devBemInfo').innerHTML=`<strong>${numero}</strong> — ${descricao}<br><span style="font-size:12px">Levado por: <strong>${responsavel}</strong> → ${destino||'destino não informado'}</span>`;
+  document.getElementById('devObs').value='';
+  abrirModal('modalDevolucaoOverlay');
+}
+async function salvarDevolucao() {
+  const movId=document.getElementById('devMovId').value;
+  const obs=document.getElementById('devObs').value.trim();
+  try {
+    await POST(`/api/movimentacoes/devolucao/${movId}`,{obs});
+    fecharModal('modalDevolucaoOverlay'); carregarMovAberto(); carregarBens();
+    toast('Devolução registrada!','success');
+  } catch(e) { toast(e.message,'error'); }
+}
+
+// USUÁRIOS
+async function carregarUsuarios() {
+  try {
+    usuariosData=await GET('/api/usuarios');
+    const tb=document.getElementById('tabelaUsuarios');
+    if (!usuariosData.length) { tb.innerHTML='<tr class="emptyRow"><td colspan="5">Nenhum usuário</td></tr>'; return; }
+    tb.innerHTML=usuariosData.map(u=>`<tr>
+      <td><strong>${u.nome}</strong></td><td>${u.login}</td>
+      <td><span class="badge badge-${u.perfil}">${u.perfil}</span></td>
+      <td><span class="badge badge-${u.ativo?'ATIVO':'BAIXADO'}">${u.ativo?'Ativo':'Inativo'}</span></td>
+      <td><button class="actBtn btnEdit" onclick="editarUsuario(${u.id})">✏️ Editar</button>
+          <button class="actBtn btnDelete" onclick="excluirUsuario(${u.id},'${esc(u.login)}')">🗑️</button></td>
+    </tr>`).join('');
+  } catch(e) { toast('Erro usuários','error'); }
+}
+function abrirModalUsuario(u=null) {
+  document.getElementById('modalUsuarioTitulo').textContent=u?'Editar Usuário':'Novo Usuário';
+  document.getElementById('usuarioId').value=u?.id||'';
+  document.getElementById('usuarioNome').value=u?.nome||'';
+  document.getElementById('usuarioEmail').value=u?.email||'';
+  document.getElementById('usuarioLogin').value=u?.login||'';
+  document.getElementById('usuarioPerfil').value=u?.perfil||'OPERADOR';
+  document.getElementById('usuarioSenha').value='';
+  document.getElementById('senhaObrigatorio').textContent=u?'(deixar em branco para manter)':'*';
+  document.getElementById('grupoAtivo').style.display=u?'':'none';
+  if (u) document.getElementById('usuarioAtivo').value=String(u.ativo);
+  abrirModal('modalUsuarioOverlay');
+}
+function editarUsuario(id){ const u=usuariosData.find(x=>x.id===id); if(u) abrirModalUsuario(u); }
+async function salvarUsuario() {
+  const id=document.getElementById('usuarioId').value;
+  const nome=document.getElementById('usuarioNome').value.trim();
+  const email=document.getElementById('usuarioEmail').value.trim();
+  const login=document.getElementById('usuarioLogin').value.trim();
+  const senha=document.getElementById('usuarioSenha').value;
+  const perfil=document.getElementById('usuarioPerfil').value;
+  if (!nome) return toast('Nome obrigatório','error');
+  if (!login) return toast('Login obrigatório','error');
+  if (!id&&!senha) return toast('Senha obrigatória','error');
+  if (senha&&senha.length<6) return toast('Senha mínimo 6 caracteres','error');
+  const body={nome,login,email,perfil}; if(senha) body.senha=senha; if(id) body.ativo=document.getElementById('usuarioAtivo').value;
+  try { if(id) await PUT(`/api/usuarios/${id}`,body); else await POST('/api/usuarios',body); fecharModal('modalUsuarioOverlay'); carregarUsuarios(); toast(id?'Usuário atualizado!':'Usuário criado!','success'); } catch(e){ toast(e.message,'error'); }
+}
+async function excluirUsuario(id,login) {
+  if (login===usuarioLogado.login) return toast('Não pode excluir seu próprio usuário','error');
+  if (!confirm(`Excluir "${login}"?`)) return;
+  try { await DEL(`/api/usuarios/${id}`); carregarUsuarios(); toast('Usuário excluído!','success'); } catch(e){ toast(e.message,'error'); }
+}
+
+// UTILS
+function abrirModal(id)  { document.getElementById(id).classList.add('open'); }
+function fecharModal(id) { document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{ if(e.target===o) o.classList.remove('open'); }));
+function toast(msg,tipo='') {
+  const el=document.getElementById('toast'); el.textContent=msg; el.className='show '+tipo;
+  setTimeout(()=>el.className='',3200);
+}
+function fmtValor(v){ return 'R$ '+(v||0).toLocaleString('pt-BR',{minimumFractionDigits:2}); }
+function fmtStatus(s){ return {ATIVO:'Ativo',MANUTENCAO:'Manutenção',EMPRESTADO:'Emprestado',BAIXADO:'Baixado'}[s]||s; }
+function fmtCat(c){ return {NOTEBOOK:'Notebook',DESKTOP:'Desktop',DRONE:'Drone',MONITOR:'Monitor',IMPRESSORA:'Impressora',PERIFERICO:'Periférico',OUTRO:'Outro'}[c]||c; }
+function fmtDt(dt){ if(!dt) return '—'; const d=new Date(dt); return d.toLocaleDateString('pt-BR')+' '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }
+function esc(s){ return (s||'').replace(/'/g,"\\'"); }
+
+// ==================== RELATÓRIOS ====================
+async function gerarRelatorio(formato) {
+  const loading = document.getElementById('relLoading');
+  loading.classList.add('show');
+  try {
+    const params = new URLSearchParams({ formato });
+    const cat  = document.getElementById('relCategoria').value;
+    const resp = document.getElementById('relResponsavel').value.trim();
+    const cpf  = document.getElementById('relCpf').value.trim();
+    const di   = document.getElementById('relDataInicio').value;
+    const df   = document.getElementById('relDataFim').value;
+    if (cat)  params.set('categoria',   cat);
+    if (resp) params.set('responsavel', resp);
+    if (cpf)  params.set('cpf',         cpf);
+    if (di)   params.set('dataInicio',  di);
+    if (df)   params.set('dataFim',     df);
+
+    const res = await fetch('/api/relatorios/bens?' + params, { credentials: 'include' });
+    if (!res.ok) { toast('Erro ao gerar relatório', 'error'); return; }
+
+    const blob = await res.blob();
+    const ext  = formato === 'pdf' ? 'pdf' : 'xlsx';
+    const nome = `relatorio_bens_${new Date().toISOString().slice(0,10)}.${ext}`;
+    const link = document.createElement('a');
+    link.href  = URL.createObjectURL(blob);
+    link.download = nome;
+    link.click();
+    URL.revokeObjectURL(link.href);
+    toast(`Relatório ${ext.toUpperCase()} gerado!`, 'success');
+  } catch(e) {
+    toast('Erro ao gerar relatório', 'error');
+  } finally {
+    loading.classList.remove('show');
+  }
+}
+
+// ==================== ESQUECI SENHA ====================
+function mostrarEsqueciSenha() {
+  document.getElementById('esqLogin').value  = '';
+  document.getElementById('esqEmail').value  = '';
+  const msg = document.getElementById('esqMsg');
+  msg.style.display = 'none';
+  msg.textContent = '';
+  abrirModal('modalEsqueciOverlay');
+}
+
+async function solicitarReset() {
+  const login = document.getElementById('esqLogin').value.trim();
+  const email = document.getElementById('esqEmail').value.trim();
+  const msg   = document.getElementById('esqMsg');
+
+  if (!login || !email) {
+    msg.style.cssText = 'display:block;background:#fdebd0;color:#b7770d;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px';
+    msg.textContent = '⚠️ Preencha o login e o e-mail.';
+    return;
+  }
+
+  try {
+    const res = await POST('/api/auth/esqueci-senha', { login, email });
+    msg.style.cssText = 'display:block;background:#d5f5e3;color:#1e8449;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px';
+    msg.textContent = '✅ ' + (res.mensagem || 'Verifique sua caixa de entrada.');
+    // Fecha o modal automaticamente após 3 segundos
+    setTimeout(() => fecharModal('modalEsqueciOverlay'), 3500);
+  } catch(e) {
+    msg.style.cssText = 'display:block;background:#f2d7d5;color:#922b21;padding:10px 14px;border-radius:6px;font-size:13px;margin-bottom:12px';
+    msg.textContent = '❌ ' + e.message;
+  }
+}
+</script>
+</body>
+</html>
