@@ -1,27 +1,25 @@
 package entities;
 
-public class Account {
+import application.Account;
 
-    public String name;
-    private double balance;
+import java.util.Scanner;
 
-    public void SetName(String name) {
-        this.name = name;
-    }
+public class AccountTest {
+    public static void main(String[] args) {
 
-    public String getName() {
-        return name;
-    }
+        Account a1 = new Account("Jane Green", 50.00);
+        Account b1 = new Account("John Green", -7.53);
 
-    public void setBalance(double balance) {
-        if (balance <= 0) {
-            this.balance = balance;
-        }else{
-            System.out.println("Saldo inválido " + balance);
-        }
-    }
+        System.out.printf("Account name: %s balance: %.2f%n", a1.getName(), a1.getBalance());
+        System.out.printf("Account name: %s balance: %.2f%n", b1.getName(), b1.getBalance());
 
-    public double getBalance() {
-        return balance;
+        Scanner input = new Scanner(System.in);
+
+        System.out.printf("Enter deposit ammount for account a1: ");
+        double deposit = input.nextDouble();
+
+        System.out.printf("Enter deposit ammount for account b1: ");
+        double deposit2 = input.nextDouble();
+
     }
 }
