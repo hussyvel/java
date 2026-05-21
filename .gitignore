@@ -6,6 +6,9 @@ out/
 ### Claude Code ###
 .claude/
 
+### RTK (Rust Token Killer) ###
+.rtk/
+
 ### Eclipse ###
 /.metadata/
 .classpath
