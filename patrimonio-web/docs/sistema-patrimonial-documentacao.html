@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Patrimonial — Documentação Técnica</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #1a1a2e; background: #fff; }
+
+  /* CAPA */
+  .cover {
+    height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff; text-align: center; page-break-after: always;
+  }
+  .cover h1 { font-size: 42px; font-weight: 800; letter-spacing: 2px; margin-bottom: 10px; }
+  .cover .subtitle { font-size: 18px; color: #e0e0e0; margin-bottom: 40px; }
+  .cover .badge {
+    display: inline-block; background: #e94560; color: #fff;
+    padding: 6px 18px; border-radius: 20px; font-size: 13px;
+    font-weight: 600; margin: 6px;
+  }
+  .cover .meta { margin-top: 50px; font-size: 13px; color: #aaa; line-height: 2; }
+  .cover .meta strong { color: #fff; }
+  .cover .logo { font-size: 60px; margin-bottom: 20px; }
+
+  /* ÍNDICE */
+  .toc { page-break-after: always; padding: 60px 80px; }
+  .toc h2 { font-size: 26px; color: #0f3460; border-bottom: 3px solid #e94560; padding-bottom: 10px; margin-bottom: 30px; }
+  .toc ol { padding-left: 20px; line-height: 2.2; }
+  .toc li { font-size: 14px; }
+  .toc a { color: #0f3460; text-decoration: none; }
+  .toc .sub { padding-left: 20px; font-size: 13px; color: #555; }
+
+  /* SEÇÕES */
+  .page { padding: 50px 80px; page-break-before: always; }
+  .page:first-of-type { page-break-before: auto; }
+
+  h2.section-title {
+    font-size: 24px; font-weight: 800; color: #0f3460;
+    border-left: 5px solid #e94560; padding-left: 14px;
+    margin-bottom: 24px;
+  }
+  h3 { font-size: 16px; color: #0f3460; margin: 20px 0 8px; font-weight: 700; }
+  h4 { font-size: 14px; color: #333; margin: 14px 0 6px; font-weight: 600; }
+  p { line-height: 1.7; margin-bottom: 10px; color: #333; }
+
+  /* CARDS DE INFO */
+  .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0; }
+  .info-card {
+    border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px;
+    background: #f8f9ff;
+  }
+  .info-card .label { font-size: 11px; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 1px; }
+  .info-card .value { font-size: 15px; font-weight: 700; color: #0f3460; margin-top: 4px; }
+
+  /* TABELAS */
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 12px; }
+  th { background: #0f3460; color: #fff; padding: 9px 12px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+  tr:nth-child(even) td { background: #f8f9ff; }
+  tr:hover td { background: #eef2ff; }
+
+  /* CÓDIGO / COMANDOS */
+  .code-block {
+    background: #1a1a2e; color: #e0e0e0; border-radius: 8px;
+    padding: 16px 20px; margin: 12px 0; font-family: 'Courier New', monospace;
+    font-size: 12px; line-height: 1.8; overflow: hidden;
+  }
+  .code-block .comment { color: #6a9955; }
+  .code-block .cmd { color: #9cdcfe; }
+  .code-block .str { color: #ce9178; }
+  .code-block .kw { color: #569cd6; }
+
+  /* BADGES DE STATUS */
+  .badge-pill {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 700; margin: 2px;
+  }
+  .badge-green  { background: #d4edda; color: #155724; }
+  .badge-yellow { background: #fff3cd; color: #856404; }
+  .badge-red    { background: #f8d7da; color: #721c24; }
+  .badge-blue   { background: #cce5ff; color: #004085; }
+  .badge-gray   { background: #e2e3e5; color: #383d41; }
+
+  /* ENDPOINTS */
+  .endpoint {
+    display: flex; align-items: flex-start; gap: 12px;
+    border: 1px solid #e0e0e0; border-radius: 8px;
+    padding: 12px 16px; margin: 8px 0; background: #fdfdff;
+  }
+  .method {
+    font-size: 11px; font-weight: 800; padding: 3px 8px;
+    border-radius: 4px; min-width: 52px; text-align: center; margin-top: 2px;
+  }
+  .GET    { background: #d4edda; color: #155724; }
+  .POST   { background: #cce5ff; color: #004085; }
+  .PUT    { background: #fff3cd; color: #856404; }
+  .DELETE { background: #f8d7da; color: #721c24; }
+  .endpoint .path { font-family: monospace; font-size: 13px; font-weight: 700; color: #0f3460; }
+  .endpoint .desc { font-size: 12px; color: #555; margin-top: 2px; }
+  .endpoint .auth { font-size: 11px; margin-top: 4px; }
+
+  /* DIAGRAMA */
+  .arch-box {
+    border: 2px solid #0f3460; border-radius: 10px; padding: 12px 16px;
+    text-align: center; background: #f0f4ff; margin: 6px;
+    display: inline-block; min-width: 130px;
+  }
+  .arch-box .icon { font-size: 22px; }
+  .arch-box .name { font-size: 12px; font-weight: 700; color: #0f3460; margin-top: 4px; }
+  .arch-row { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 10px 0; }
+  .arch-arrow { font-size: 20px; color: #0f3460; }
+
+  /* ALERT */
+  .alert {
+    border-radius: 8px; padding: 12px 16px; margin: 12px 0;
+    border-left: 4px solid;
+  }
+  .alert-info    { background: #e8f4fd; border-color: #3498db; color: #1a5276; }
+  .alert-warning { background: #fef9e7; border-color: #f39c12; color: #7d6608; }
+  .alert-success { background: #eafaf1; border-color: #27ae60; color: #1e8449; }
+  .alert-danger  { background: #fdedec; border-color: #e74c3c; color: #922b21; }
+
+  /* FOOTER */
+  .page-footer {
+    position: fixed; bottom: 20px; left: 80px; right: 80px;
+    display: flex; justify-content: space-between;
+    font-size: 10px; color: #aaa; border-top: 1px solid #eee; padding-top: 8px;
+  }
+
+  @media print {
+    .cover { height: 100vh; }
+    .page { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ CAPA ═══════════════════ -->
+<div class="cover">
+  <div class="logo">🏛️</div>
+  <h1>SISTEMA PATRIMONIAL</h1>
+  <div class="subtitle">Documentação Técnica Completa</div>
+
+  <div>
+    <span class="badge">Spring Boot 3.2.3</span>
+    <span class="badge">Java 17</span>
+    <span class="badge">PostgreSQL 16</span>
+    <span class="badge">Docker</span>
+  </div>
+
+  <div class="meta">
+    <strong>Versão:</strong> 1.0.0<br>
+    <strong>Artefato:</strong> sistema-patrimonial-1.0.0.jar<br>
+    <strong>Data:</strong> Junho / 2026<br>
+    <strong>Responsável:</strong> hussyvel<br>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ ÍNDICE ═══════════════════ -->
+<div class="toc">
+  <h2>Sumário</h2>
+  <ol>
+    <li><a href="#visao-geral">Visão Geral do Sistema</a></li>
+    <li><a href="#stack">Stack Tecnológica</a></li>
+    <li><a href="#arquitetura">Arquitetura</a></li>
+    <li><a href="#modelo">Modelo de Dados</a>
+      <ol class="sub">
+        <li>Entidade Bem</li>
+        <li>Entidade Usuario</li>
+        <li>Entidade Movimentação</li>
+      </ol>
+    </li>
+    <li><a href="#api">API REST — Endpoints</a>
+      <ol class="sub">
+        <li>Autenticação (/api/auth)</li>
+        <li>Bens (/api/bens)</li>
+        <li>Movimentações (/api/movimentacoes)</li>
+        <li>Usuários (/api/usuarios)</li>
+        <li>Relatórios (/api/relatorios)</li>
+      </ol>
+    </li>
+    <li><a href="#seguranca">Segurança</a></li>
+    <li><a href="#relatorios">Relatórios</a></li>
+    <li><a href="#email">Serviço de E-mail</a></li>
+    <li><a href="#docker">Docker e Docker Compose</a></li>
+    <li><a href="#comandos">Referência de Comandos</a></li>
+    <li><a href="#ambiente">Configuração do Ambiente</a></li>
+    <li><a href="#troubleshooting">Resolução de Problemas</a></li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════ 1. VISÃO GERAL ════════════ -->
+<div class="page" id="visao-geral">
+  <h2 class="section-title">1. Visão Geral do Sistema</h2>
+
+  <p>
+    O <strong>Sistema Patrimonial</strong> é uma aplicação web para gerenciamento de patrimônio
+    (bens materiais) de uma organização. Permite cadastrar bens, controlar empréstimos e devoluções,
+    transferências entre setores, emitir relatórios e gerenciar usuários com diferentes perfis de acesso.
+  </p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">Módulo Principal</div>
+      <div class="value">Gestão de Bens (Patrimônio)</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Módulo de Controle</div>
+      <div class="value">Saídas, Devoluções e Transferências</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Módulo de Relatórios</div>
+      <div class="value">PDF e Excel com filtros</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Módulo de Usuários</div>
+      <div class="value">Admin e Operador (RBAC)</div>
+    </div>
+  </div>
+
+  <h3>Funcionalidades Principais</h3>
+  <table>
+    <tr><th>Funcionalidade</th><th>Descrição</th><th>Perfil</th></tr>
+    <tr><td>Cadastro de Bens</td><td>Criar, editar, excluir e buscar bens patrimoniais</td><td>Admin / Operador</td></tr>
+    <tr><td>Registro de Saída</td><td>Emprestar bem a um responsável com destino registrado</td><td>Admin / Operador</td></tr>
+    <tr><td>Registro de Devolução</td><td>Confirmar retorno do bem, restaura status para ATIVO</td><td>Admin / Operador</td></tr>
+    <tr><td>Transferência de Setor</td><td>Mover bem permanentemente entre setores</td><td>Admin / Operador</td></tr>
+    <tr><td>Dashboard</td><td>Totais por categoria, status e valor patrimonial</td><td>Admin / Operador</td></tr>
+    <tr><td>Relatório PDF</td><td>Relatório de bens com filtros, download direto</td><td>Admin</td></tr>
+    <tr><td>Relatório Excel</td><td>Planilha de bens com filtros, download direto</td><td>Admin</td></tr>
+    <tr><td>Gestão de Usuários</td><td>Criar, editar, ativar/inativar, excluir usuários</td><td>Admin</td></tr>
+    <tr><td>Recuperação de Senha</td><td>Envio de link de reset por e-mail</td><td>Público</td></tr>
+    <tr><td>Visão por Setor</td><td>Agrupar bens por setor com resumo</td><td>Admin / Operador</td></tr>
+  </table>
+
+  <div class="alert alert-info">
+    <strong>Credencial padrão:</strong> Na primeira execução, o sistema cria automaticamente um usuário
+    <code>login: admin</code> / <code>senha: admin123</code> se não houver usuários cadastrados.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 2. STACK ═════════════════ -->
+<div class="page" id="stack">
+  <h2 class="section-title">2. Stack Tecnológica</h2>
+
+  <table>
+    <tr><th>Camada</th><th>Tecnologia</th><th>Versão</th><th>Função</th></tr>
+    <tr><td>Linguagem</td><td>Java</td><td>17 (LTS)</td><td>Runtime da aplicação</td></tr>
+    <tr><td>Framework</td><td>Spring Boot</td><td>3.2.3</td><td>Auto-configuração, servidor embutido</td></tr>
+    <tr><td>Web</td><td>Spring MVC (REST)</td><td>6.1.x</td><td>Controllers REST, serialização JSON</td></tr>
+    <tr><td>Persistência</td><td>Spring Data JPA + Hibernate</td><td>3.2.x</td><td>ORM, JPQL, mapeamento de entidades</td></tr>
+    <tr><td>Banco de Dados</td><td>PostgreSQL</td><td>16</td><td>Banco principal</td></tr>
+    <tr><td>Segurança</td><td>Spring Security</td><td>6.2.x</td><td>Autenticação, autorização por perfil</td></tr>
+    <tr><td>Validação</td><td>Jakarta Validation (Bean Validation)</td><td>3.0</td><td>Validação de campos nas entidades</td></tr>
+    <tr><td>Relatório PDF</td><td>OpenPDF (fork do iText 2.1)</td><td>1.3.30</td><td>Geração de relatórios em PDF</td></tr>
+    <tr><td>Relatório Excel</td><td>Apache POI XSSF</td><td>5.x</td><td>Geração de planilhas .xlsx</td></tr>
+    <tr><td>E-mail</td><td>Spring Mail + Jakarta Mail</td><td>—</td><td>Envio de e-mail SMTP</td></tr>
+    <tr><td>Build</td><td>Maven</td><td>3.9.x</td><td>Gerenciamento de dependências e build</td></tr>
+    <tr><td>Container</td><td>Docker + Docker Compose</td><td>—</td><td>Empacotamento e orquestração</td></tr>
+    <tr><td>Frontend</td><td>HTML/CSS/JavaScript (SPA estático)</td><td>—</td><td>Interface servida pelo Spring Boot</td></tr>
+  </table>
+
+  <h3>Arquivo de Build — pom.xml (resumo)</h3>
+  <div class="code-block">
+<span class="comment">&lt;!-- Identificação do artefato --&gt;</span>
+groupId:    br.gov.patrimonio
+artifactId: sistema-patrimonial
+version:    1.0.0
+java:       17
+
+<span class="comment">&lt;!-- Dependências principais --&gt;</span>
+spring-boot-starter-web
+spring-boot-starter-data-jpa
+spring-boot-starter-security
+spring-boot-starter-validation
+spring-boot-starter-mail
+postgresql (runtime)
+com.github.librepdf:openpdf
+org.apache.poi:poi-ooxml
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 3. ARQUITETURA ════════════ -->
+<div class="page" id="arquitetura">
+  <h2 class="section-title">3. Arquitetura</h2>
+
+  <p>Arquitetura em camadas padrão Spring Boot. <strong>Não há camada de Service</strong>
+  exceto para geração de relatórios e envio de e-mail — os controllers chamam os repositories diretamente.</p>
+
+  <div class="arch-row">
+    <div class="arch-box"><div class="icon">🖥️</div><div class="name">Frontend SPA<br><small>index.html</small></div></div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-box"><div class="icon">🔒</div><div class="name">Spring Security<br><small>Filtro HTTP</small></div></div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-box"><div class="icon">🎮</div><div class="name">Controllers<br><small>/api/**</small></div></div>
+  </div>
+  <div class="arch-row">
+    <div style="width:130px"></div>
+    <div class="arch-arrow" style="transform:rotate(90deg)">→</div>
+  </div>
+  <div class="arch-row">
+    <div class="arch-box"><div class="icon">📊</div><div class="name">RelatorioService<br><small>PDF / Excel</small></div></div>
+    <div class="arch-arrow">←</div>
+    <div class="arch-box"><div class="icon">🗄️</div><div class="name">Repositories<br><small>Spring Data JPA</small></div></div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-box"><div class="icon">🐘</div><div class="name">PostgreSQL<br><small>porta 5432</small></div></div>
+  </div>
+
+  <h3>Estrutura de Pacotes</h3>
+  <div class="code-block">
+src/main/java/patrimonio/
+├── PatrimonioApplication.java       <span class="comment"># Classe main (Spring Boot)</span>
+├── config/
+│   ├── SecurityConfig.java          <span class="comment"># Regras de segurança HTTP</span>
+│   └── DataInitializer.java         <span class="comment"># Seed do usuário admin</span>
+├── model/
+│   ├── Bem.java                     <span class="comment"># Entidade principal (tabela: bens)</span>
+│   ├── Usuario.java                 <span class="comment"># Usuários do sistema (tabela: usuarios)</span>
+│   ├── Movimentacao.java            <span class="comment"># Saídas/devoluções (tabela: movimentacoes)</span>
+│   └── Setor.java                   <span class="comment"># Enum de setores disponíveis</span>
+├── repository/
+│   ├── BemRepository.java           <span class="comment"># Queries JPQL de Bem</span>
+│   ├── UsuarioRepository.java       <span class="comment"># Queries de Usuario</span>
+│   └── MovimentacaoRepository.java  <span class="comment"># Queries de Movimentacao</span>
+├── controller/
+│   ├── AuthController.java          <span class="comment"># Login, logout, /me</span>
+│   ├── BemController.java           <span class="comment"># CRUD de bens + dashboard</span>
+│   ├── UsuarioController.java       <span class="comment"># CRUD de usuários</span>
+│   ├── MovimentacaoController.java  <span class="comment"># Saídas, devoluções, transferências</span>
+│   ├── RelatorioController.java     <span class="comment"># Geração de PDF/Excel</span>
+│   └── PasswordResetController.java <span class="comment"># Reset de senha por e-mail</span>
+└── service/
+    ├── RelatorioService.java        <span class="comment"># Lógica de geração PDF + Excel</span>
+    └── EmailService.java            <span class="comment"># Envio de e-mail SMTP</span>
+
+src/main/resources/
+├── application.properties           <span class="comment"># Configurações da aplicação</span>
+└── static/
+    └── index.html                   <span class="comment"># Frontend SPA (Single Page Application)</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 4. MODELO ════════════════ -->
+<div class="page" id="modelo">
+  <h2 class="section-title">4. Modelo de Dados</h2>
+
+  <h3>4.1 Entidade Bem (tabela: bens)</h3>
+  <table>
+    <tr><th>Campo</th><th>Tipo Java</th><th>Coluna DB</th><th>Obrigatório</th><th>Descrição</th></tr>
+    <tr><td>id</td><td>Long</td><td>id (PK, SERIAL)</td><td>—</td><td>Identificador gerado automaticamente</td></tr>
+    <tr><td>numeroPatrimonio</td><td>String</td><td>numero_patrimonio</td><td>✓ (único)</td><td>Número de tombamento</td></tr>
+    <tr><td>descricao</td><td>String</td><td>descricao</td><td>✓</td><td>Descrição do bem</td></tr>
+    <tr><td>categoria</td><td>Categoria (enum)</td><td>categoria</td><td>✓</td><td>NOTEBOOK, DESKTOP, DRONE, MONITOR, IMPRESSORA, PERIFERICO, OUTRO</td></tr>
+    <tr><td>marca</td><td>String</td><td>marca</td><td>—</td><td>Fabricante</td></tr>
+    <tr><td>modelo</td><td>String</td><td>modelo</td><td>—</td><td>Modelo do equipamento</td></tr>
+    <tr><td>numeroSerie</td><td>String</td><td>numero_serie</td><td>—</td><td>Número de série</td></tr>
+    <tr><td>status</td><td>Status (enum)</td><td>status</td><td>—</td><td>ATIVO (padrão), MANUTENCAO, EMPRESTADO, BAIXADO</td></tr>
+    <tr><td>localizacao</td><td>String</td><td>localizacao</td><td>—</td><td>Localização física do bem</td></tr>
+    <tr><td>setor</td><td>String</td><td>setor</td><td>—</td><td>Setor responsável</td></tr>
+    <tr><td>responsavel</td><td>String</td><td>responsavel</td><td>—</td><td>Nome do responsável</td></tr>
+    <tr><td>responsavelCpf</td><td>String</td><td>responsavel_cpf</td><td>—</td><td>CPF do responsável</td></tr>
+    <tr><td>responsavelEmail</td><td>String</td><td>responsavel_email</td><td>—</td><td>E-mail do responsável</td></tr>
+    <tr><td>responsavelTelefone</td><td>String</td><td>responsavel_telefone</td><td>—</td><td>Telefone do responsável</td></tr>
+    <tr><td>dataAquisicao</td><td>LocalDate</td><td>data_aquisicao</td><td>—</td><td>Data de compra</td></tr>
+    <tr><td>valor</td><td>BigDecimal</td><td>valor</td><td>—</td><td>Valor de aquisição (12,2)</td></tr>
+    <tr><td>hostname</td><td>String</td><td>hostname</td><td>—</td><td>Nome de rede (computadores)</td></tr>
+    <tr><td>observacoes</td><td>String</td><td>observacoes (TEXT)</td><td>—</td><td>Observações livres</td></tr>
+    <tr><td>criadoEm</td><td>LocalDateTime</td><td>criado_em</td><td>—</td><td>Timestamp de criação (imutável)</td></tr>
+    <tr><td>atualizadoEm</td><td>LocalDateTime</td><td>atualizado_em</td><td>—</td><td>Timestamp da última atualização</td></tr>
+  </table>
+
+  <h3>4.2 Entidade Usuario (tabela: usuarios)</h3>
+  <table>
+    <tr><th>Campo</th><th>Tipo Java</th><th>Obrigatório</th><th>Descrição</th></tr>
+    <tr><td>id</td><td>Long</td><td>—</td><td>PK gerada automaticamente</td></tr>
+    <tr><td>nome</td><td>String</td><td>✓</td><td>Nome completo</td></tr>
+    <tr><td>login</td><td>String</td><td>✓ (único)</td><td>Login de acesso ao sistema</td></tr>
+    <tr><td>email</td><td>String</td><td>—</td><td>E-mail para recuperação de senha</td></tr>
+    <tr><td>senha</td><td>String</td><td>✓</td><td>Hash BCrypt da senha</td></tr>
+    <tr><td>perfil</td><td>Perfil (enum)</td><td>—</td><td>ADMIN ou OPERADOR (padrão: OPERADOR)</td></tr>
+    <tr><td>ativo</td><td>boolean</td><td>—</td><td>false = usuário bloqueado do login</td></tr>
+    <tr><td>criadoEm</td><td>LocalDateTime</td><td>—</td><td>Timestamp de criação</td></tr>
+  </table>
+
+  <h3>4.3 Entidade Movimentacao (tabela: movimentacoes)</h3>
+  <table>
+    <tr><th>Campo</th><th>Tipo Java</th><th>Obrigatório</th><th>Descrição</th></tr>
+    <tr><td>id</td><td>Long</td><td>—</td><td>PK gerada automaticamente</td></tr>
+    <tr><td>bem</td><td>Bem (@ManyToOne)</td><td>✓</td><td>Bem vinculado (FK: bem_id)</td></tr>
+    <tr><td>tipo</td><td>Tipo (enum)</td><td>✓</td><td>SAIDA, DEVOLUCAO ou TRANSFERENCIA</td></tr>
+    <tr><td>responsavelRetirada</td><td>String</td><td>✓</td><td>Nome de quem levou o bem</td></tr>
+    <tr><td>cpfRetirada</td><td>String</td><td>—</td><td>CPF de quem retirou</td></tr>
+    <tr><td>localOrigem</td><td>String</td><td>—</td><td>Localização antes da saída</td></tr>
+    <tr><td>destino</td><td>String</td><td>—</td><td>Destino do bem</td></tr>
+    <tr><td>dataSaida</td><td>LocalDateTime</td><td>✓</td><td>Momento do registro de saída</td></tr>
+    <tr><td>dataDevolucao</td><td>LocalDateTime</td><td>—</td><td>null = em aberto; preenchido = devolvido</td></tr>
+    <tr><td>usuarioSaida</td><td>String</td><td>—</td><td>Login do funcionário que registrou a saída</td></tr>
+    <tr><td>usuarioDevolucao</td><td>String</td><td>—</td><td>Login do funcionário que registrou a devolução</td></tr>
+    <tr><td>numeroChamado</td><td>String</td><td>—</td><td>Número de chamado / OS</td></tr>
+    <tr><td>obsSaida</td><td>String</td><td>—</td><td>Observações da saída</td></tr>
+    <tr><td>obsDevolucao</td><td>String</td><td>—</td><td>Observações da devolução</td></tr>
+    <tr><td>setorAnterior</td><td>String</td><td>—</td><td>Setor antes da movimentação</td></tr>
+    <tr><td>setorAtual</td><td>String</td><td>—</td><td>Setor atual após movimentação</td></tr>
+  </table>
+
+  <div class="alert alert-info">
+    <strong>Regra de negócio:</strong> Uma movimentação é considerada <em>em aberto</em> quando
+    <code>dataDevolucao == null</code>. Um bem com saída em aberto não pode receber nova saída nem
+    ser transferido — é necessário registrar a devolução primeiro.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 5. API ═══════════════════ -->
+<div class="page" id="api">
+  <h2 class="section-title">5. API REST — Endpoints</h2>
+
+  <h3>5.1 Autenticação — /api/auth</h3>
+
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/auth/login</div>
+      <div class="desc">Realiza login. Cria sessão HTTP. Body: <code>{"login":"admin","senha":"admin123"}</code></div>
+      <div class="auth"><span class="badge-pill badge-green">Público</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/auth/me</div>
+      <div class="desc">Retorna dados do usuário autenticado na sessão atual</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/auth/logout</div>
+      <div class="desc">Encerra a sessão do usuário atual</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+
+  <h3>5.2 Bens — /api/bens</h3>
+
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/bens</div>
+      <div class="desc">Lista todos os bens. Query param opcional: <code>?q=texto</code> para busca</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/bens/{id}</div>
+      <div class="desc">Retorna um bem específico pelo ID</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/bens</div>
+      <div class="desc">Cria novo bem. Body: objeto Bem (numeroPatrimonio, descricao e categoria obrigatórios)</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method PUT">PUT</span>
+    <div>
+      <div class="path">/api/bens/{id}</div>
+      <div class="desc">Atualiza bem existente. Setor bloqueado se houver saída em aberto</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method DELETE">DELETE</span>
+    <div>
+      <div class="path">/api/bens/{id}</div>
+      <div class="desc">Exclui um bem e todas as suas movimentações</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method DELETE">DELETE</span>
+    <div>
+      <div class="path">/api/bens</div>
+      <div class="desc">Exclui TODOS os bens e movimentações (operação irreversível)</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/bens/dashboard</div>
+      <div class="desc">Retorna totais gerais, contagem por categoria e por status</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/bens/enums</div>
+      <div class="desc">Retorna listas de categorias, statuses e setores disponíveis</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/bens/por-setor</div>
+      <div class="desc">Retorna bens agrupados por setor com resumo de quantidades</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+
+  <h3>5.3 Movimentações — /api/movimentacoes</h3>
+
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/movimentacoes</div>
+      <div class="desc">Lista todas as movimentações (ordenadas por data desc). Suporta <code>?q=</code></div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/movimentacoes/em-aberto</div>
+      <div class="desc">Lista apenas saídas sem devolução registrada</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/movimentacoes/bem/{bemId}</div>
+      <div class="desc">Histórico completo de movimentações de um bem específico</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/movimentacoes/saida</div>
+      <div class="desc">Registra saída de bem. Altera status do bem para EMPRESTADO. Body: <code>{bemId, responsavelRetirada, destino, ...}</code></div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/movimentacoes/devolucao/{movId}</div>
+      <div class="desc">Registra devolução. Restaura status do bem para ATIVO e localização de origem</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/movimentacoes/transferencia</div>
+      <div class="desc">Transfere bem entre setores permanentemente. Body: <code>{bemId, setorDestino, responsavel}</code></div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/movimentacoes/resumo</div>
+      <div class="desc">Contagem de saídas em aberto e total de movimentações</div>
+      <div class="auth"><span class="badge-pill badge-blue">Autenticado</span></div>
+    </div>
+  </div>
+
+  <h3>5.4 Usuários — /api/usuarios</h3>
+
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/usuarios</div>
+      <div class="desc">Lista todos os usuários (senhas omitidas na resposta)</div>
+      <div class="auth"><span class="badge-pill badge-red">Somente ADMIN</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method POST">POST</span>
+    <div>
+      <div class="path">/api/usuarios</div>
+      <div class="desc">Cria novo usuário. Body: <code>{nome, login, email, senha, perfil}</code>. Senha armazenada com BCrypt</div>
+      <div class="auth"><span class="badge-pill badge-red">Somente ADMIN</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method PUT">PUT</span>
+    <div>
+      <div class="path">/api/usuarios/{id}</div>
+      <div class="desc">Atualiza usuário. Senha só alterada se informada no body</div>
+      <div class="auth"><span class="badge-pill badge-red">Somente ADMIN</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method DELETE">DELETE</span>
+    <div>
+      <div class="path">/api/usuarios/{id}</div>
+      <div class="desc">Exclui usuário pelo ID</div>
+      <div class="auth"><span class="badge-pill badge-red">Somente ADMIN</span></div>
+    </div>
+  </div>
+
+  <h3>5.5 Relatórios — /api/relatorios</h3>
+
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/relatorios/bens?formato=pdf</div>
+      <div class="desc">Gera e baixa relatório PDF com filtros opcionais: <code>categoria</code>, <code>responsavel</code>, <code>cpf</code>, <code>dataInicio</code>, <code>dataFim</code></div>
+      <div class="auth"><span class="badge-pill badge-red">Somente ADMIN</span></div>
+    </div>
+  </div>
+  <div class="endpoint">
+    <span class="method GET">GET</span>
+    <div>
+      <div class="path">/api/relatorios/bens?formato=excel</div>
+      <div class="desc">Gera e baixa planilha Excel (.xlsx) com os mesmos filtros</div>
+      <div class="auth"><span class="badge-pill badge-red">Somente ADMIN</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 6. SEGURANÇA ══════════════ -->
+<div class="page" id="seguranca">
+  <h2 class="section-title">6. Segurança</h2>
+
+  <p>Autenticação baseada em sessão HTTP gerenciada pelo Spring Security. CSRF desabilitado. Senhas armazenadas com <strong>BCrypt</strong>.</p>
+
+  <h3>Regras de Acesso (SecurityConfig)</h3>
+  <table>
+    <tr><th>Rota</th><th>Método</th><th>Acesso</th></tr>
+    <tr><td>/api/auth/**</td><td>Todos</td><td><span class="badge-pill badge-green">Público</span></td></tr>
+    <tr><td>/</td><td>GET</td><td><span class="badge-pill badge-green">Público</span></td></tr>
+    <tr><td>/api/bens/**</td><td>GET</td><td><span class="badge-pill badge-blue">Autenticado</span></td></tr>
+    <tr><td>/api/movimentacoes/**</td><td>Todos</td><td><span class="badge-pill badge-blue">Autenticado</span></td></tr>
+    <tr><td>/api/bens/**</td><td>POST, PUT, DELETE</td><td><span class="badge-pill badge-blue">Autenticado</span></td></tr>
+    <tr><td>/api/usuarios/**</td><td>Todos</td><td><span class="badge-pill badge-red">ROLE_ADMIN</span></td></tr>
+    <tr><td>/api/relatorios/**</td><td>Todos</td><td><span class="badge-pill badge-red">ROLE_ADMIN</span></td></tr>
+  </table>
+
+  <h3>Perfis de Usuário</h3>
+  <table>
+    <tr><th>Perfil</th><th>Role Spring Security</th><th>Permissões</th></tr>
+    <tr>
+      <td><span class="badge-pill badge-red">ADMIN</span></td>
+      <td>ROLE_ADMIN</td>
+      <td>Acesso total: bens, movimentações, usuários, relatórios</td>
+    </tr>
+    <tr>
+      <td><span class="badge-pill badge-blue">OPERADOR</span></td>
+      <td>ROLE_OPERADOR</td>
+      <td>Consultar bens, registrar saídas e devoluções, transferências</td>
+    </tr>
+  </table>
+
+  <div class="alert alert-warning">
+    <strong>Usuário inativo:</strong> Se <code>ativo=false</code>, o Spring Security lança
+    <code>DisabledException</code> e o login retorna 401. O campo é gerenciado por ADMIN via
+    <code>PUT /api/usuarios/{id}</code>.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 7. RELATÓRIOS ════════════ -->
+<div class="page" id="relatorios">
+  <h2 class="section-title">7. Relatórios</h2>
+
+  <p>Gerados pelo <code>RelatorioService</code> e disponibilizados via <code>RelatorioController</code> com download direto (Content-Disposition: attachment).</p>
+
+  <h3>Filtros Disponíveis</h3>
+  <table>
+    <tr><th>Parâmetro</th><th>Tipo</th><th>Exemplo</th><th>Descrição</th></tr>
+    <tr><td>categoria</td><td>String</td><td>NOTEBOOK</td><td>Filtra por categoria do bem</td></tr>
+    <tr><td>responsavel</td><td>String</td><td>João Silva</td><td>Filtra por nome do responsável</td></tr>
+    <tr><td>cpf</td><td>String</td><td>123.456.789-00</td><td>Filtra por CPF do responsável</td></tr>
+    <tr><td>dataInicio</td><td>LocalDate (ISO)</td><td>2026-01-01</td><td>Data de aquisição mínima</td></tr>
+    <tr><td>dataFim</td><td>LocalDate (ISO)</td><td>2026-12-31</td><td>Data de aquisição máxima</td></tr>
+    <tr><td>formato</td><td>String</td><td>pdf ou excel</td><td><strong>Obrigatório</strong> — define o formato de saída</td></tr>
+  </table>
+
+  <h3>Exemplos de URL</h3>
+  <div class="code-block">
+<span class="comment"># Relatório completo em PDF</span>
+GET /api/relatorios/bens?formato=pdf
+
+<span class="comment"># Apenas notebooks em Excel</span>
+GET /api/relatorios/bens?formato=excel&categoria=NOTEBOOK
+
+<span class="comment"># Bens de um responsável específico</span>
+GET /api/relatorios/bens?formato=pdf&responsavel=João+Silva
+
+<span class="comment"># Bens adquiridos em 2025</span>
+GET /api/relatorios/bens?formato=excel&dataInicio=2025-01-01&dataFim=2025-12-31
+  </div>
+
+  <div class="alert alert-info">
+    <strong>Nomenclatura dos arquivos:</strong> Os arquivos baixados têm timestamp automático no nome,
+    ex.: <code>relatorio_bens_20260609_1430.pdf</code>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 8. E-MAIL ════════════════ -->
+<div class="page" id="email">
+  <h2 class="section-title">8. Serviço de E-mail</h2>
+
+  <p>Utilizado para o fluxo de recuperação de senha. Configurado via SMTP no <code>application.properties</code>.</p>
+
+  <h3>Configuração Gmail (ativa)</h3>
+  <div class="code-block">
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=hussyribeiro@gmail.com
+spring.mail.password=&lt;app-password-gmail&gt;
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.from=hussyribeiro@gmail.com
+  </div>
+
+  <h3>Fluxo de Recuperação de Senha</h3>
+  <table>
+    <tr><th>Endpoint</th><th>Descrição</th></tr>
+    <tr><td>POST /api/auth/esqueci-senha</td><td>Recebe o e-mail, gera token e envia link de reset</td></tr>
+    <tr><td>POST /api/auth/redefinir-senha</td><td>Recebe token + nova senha, atualiza BCrypt hash</td></tr>
+  </table>
+
+  <div class="alert alert-warning">
+    <strong>Gmail:</strong> Use uma <em>App Password</em> (senha de app) gerada em
+    Conta Google → Segurança → Senhas de app. A senha normal de login não funciona com SMTP.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 9. DOCKER ════════════════ -->
+<div class="page" id="docker">
+  <h2 class="section-title">9. Docker e Docker Compose</h2>
+
+  <p>
+    O projeto inclui <strong>Dockerfile</strong> com build multi-estágio e <strong>docker-compose.yml</strong>
+    que orquestra a aplicação + PostgreSQL. Resolve o problema de versão de Java e conflito de portas.
+  </p>
+
+  <h3>Dockerfile (multi-estágio)</h3>
+  <div class="code-block">
+<span class="comment"># Estágio 1: build com Maven + Java 17</span>
+FROM maven:3.9.6-eclipse-temurin-17 AS build
+WORKDIR /app
+COPY pom.xml .
+RUN mvn dependency:go-offline -q
+COPY src ./src
+RUN mvn package -DskipTests -q
+
+<span class="comment"># Estágio 2: imagem final enxuta</span>
+FROM eclipse-temurin:17-jre-jammy
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+  </div>
+
+  <h3>docker-compose.yml</h3>
+  <div class="code-block">
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: patrimonio-db
+    environment:
+      POSTGRES_DB: patrimonio
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"   <span class="comment"># 5433 no host (não conflita com Postgres local)</span>
+    volumes:
+      - patrimonio-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d patrimonio"]
+      interval: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: patrimonio-app
+    ports:
+      - "8082:8080"   <span class="comment"># acessa em http://localhost:8082</span>
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/patrimonio
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  patrimonio-db-data:
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">URL da Aplicação (Docker)</div>
+      <div class="value">http://localhost:8082</div>
+    </div>
+    <div class="info-card">
+      <div class="label">PostgreSQL no Host (Docker)</div>
+      <div class="value">localhost:5433</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 10. COMANDOS ════════════ -->
+<div class="page" id="comandos">
+  <h2 class="section-title">10. Referência de Comandos</h2>
+
+  <h3>Build e Execução (sem Docker)</h3>
+  <div class="code-block">
+<span class="comment"># Compilar o projeto</span>
+<span class="cmd">JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 mvn compile</span>
+
+<span class="comment"># Build completo (gera o JAR em target/)</span>
+<span class="cmd">JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 mvn clean install</span>
+
+<span class="comment"># Subir em modo desenvolvimento (hot-reload não habilitado)</span>
+<span class="cmd">JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 mvn spring-boot:run</span>
+
+<span class="comment"># Subir em porta diferente</span>
+<span class="cmd">JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 mvn spring-boot:run \
+  -Dspring-boot.run.arguments="--server.port=8082"</span>
+
+<span class="comment"># Executar o JAR gerado diretamente</span>
+<span class="cmd">JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 \
+  java -jar target/sistema-patrimonial-1.0.0.jar</span>
+  </div>
+
+  <h3>Docker Compose — Comandos Essenciais</h3>
+  <div class="code-block">
+<span class="comment"># Primeira vez ou após mudanças no código Java</span>
+<span class="cmd">docker compose up --build</span>
+
+<span class="comment"># Subir sem recompilar (código não mudou)</span>
+<span class="cmd">docker compose up</span>
+
+<span class="comment"># Subir em background (detached)</span>
+<span class="cmd">docker compose up -d</span>
+
+<span class="comment"># Parar todos os containers</span>
+<span class="cmd">docker compose down</span>
+
+<span class="comment"># Parar e apagar o volume do banco (dados perdidos!)</span>
+<span class="cmd">docker compose down -v</span>
+
+<span class="comment"># Ver logs da aplicação em tempo real</span>
+<span class="cmd">docker compose logs -f app</span>
+
+<span class="comment"># Ver logs do banco de dados</span>
+<span class="cmd">docker compose logs -f db</span>
+
+<span class="comment"># Ver status dos containers</span>
+<span class="cmd">docker compose ps</span>
+
+<span class="comment"># Entrar no container da aplicação (shell)</span>
+<span class="cmd">docker compose exec app sh</span>
+
+<span class="comment"># Entrar no PostgreSQL dentro do Docker</span>
+<span class="cmd">docker compose exec db psql -U postgres -d patrimonio</span>
+  </div>
+
+  <h3>Maven — Comandos Adicionais</h3>
+  <div class="code-block">
+<span class="comment"># Limpar diretório target/</span>
+<span class="cmd">mvn clean</span>
+
+<span class="comment"># Build sem rodar testes</span>
+<span class="cmd">mvn package -DskipTests</span>
+
+<span class="comment"># Ver árvore de dependências</span>
+<span class="cmd">mvn dependency:tree</span>
+
+<span class="comment"># Verificar atualizações de dependências</span>
+<span class="cmd">mvn versions:display-dependency-updates</span>
+  </div>
+
+  <h3>PostgreSQL — Acesso Direto (local)</h3>
+  <div class="code-block">
+<span class="comment"># Conectar ao banco local</span>
+<span class="cmd">psql -U postgres -d patrimonio</span>
+
+<span class="comment"># Principais consultas úteis</span>
+SELECT * FROM bens LIMIT 10;
+SELECT * FROM usuarios;
+SELECT * FROM movimentacoes WHERE data_devolucao IS NULL;
+
+<span class="comment"># Contar bens por status</span>
+SELECT status, COUNT(*) FROM bens GROUP BY status;
+
+<span class="comment"># Bens emprestados no momento</span>
+SELECT b.numero_patrimonio, b.descricao, m.responsavel_retirada, m.data_saida
+FROM movimentacoes m JOIN bens b ON b.id = m.bem_id
+WHERE m.data_devolucao IS NULL;
+  </div>
+
+  <h3>Configuração Permanente do Java 17 (opcional)</h3>
+  <div class="code-block">
+<span class="comment"># Adicionar ao ~/.bashrc para não precisar do JAVA_HOME em todo comando</span>
+echo 'export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64' >> ~/.bashrc
+echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+
+<span class="comment"># Verificar</span>
+java -version   <span class="comment"># deve mostrar openjdk 17</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 11. AMBIENTE ════════════ -->
+<div class="page" id="ambiente">
+  <h2 class="section-title">11. Configuração do Ambiente</h2>
+
+  <h3>Pré-requisitos</h3>
+  <table>
+    <tr><th>Componente</th><th>Versão mínima</th><th>Verificação</th></tr>
+    <tr><td>Java JDK</td><td>17</td><td><code>java -version</code></td></tr>
+    <tr><td>Maven</td><td>3.6+</td><td><code>mvn --version</code></td></tr>
+    <tr><td>PostgreSQL</td><td>12+</td><td><code>psql --version</code></td></tr>
+    <tr><td>Docker</td><td>24+</td><td><code>docker --version</code></td></tr>
+    <tr><td>Docker Compose</td><td>2.x</td><td><code>docker compose version</code></td></tr>
+  </table>
+
+  <h3>application.properties — Configurações Chave</h3>
+  <table>
+    <tr><th>Propriedade</th><th>Valor Padrão</th><th>Descrição</th></tr>
+    <tr><td>server.port</td><td>8080</td><td>Porta HTTP da aplicação</td></tr>
+    <tr><td>spring.datasource.url</td><td>jdbc:postgresql://localhost:5432/patrimonio</td><td>URL de conexão ao banco</td></tr>
+    <tr><td>spring.datasource.username</td><td>postgres</td><td>Usuário do PostgreSQL</td></tr>
+    <tr><td>spring.datasource.password</td><td>postgres</td><td>Senha do PostgreSQL</td></tr>
+    <tr><td>spring.jpa.hibernate.ddl-auto</td><td>update</td><td>Schema gerenciado automaticamente pelo Hibernate</td></tr>
+    <tr><td>spring.jpa.show-sql</td><td>false</td><td>Logar queries SQL no console</td></tr>
+    <tr><td>spring.mail.host</td><td>smtp.gmail.com</td><td>Servidor SMTP para e-mails</td></tr>
+    <tr><td>spring.mail.port</td><td>587</td><td>Porta SMTP (STARTTLS)</td></tr>
+  </table>
+
+  <h3>Substituição por Variável de Ambiente (Docker)</h3>
+  <p>No <code>docker-compose.yml</code>, as propriedades de <code>application.properties</code> podem ser sobrescritas via variável de ambiente usando a notação do Spring:</p>
+  <div class="code-block">
+<span class="comment"># application.properties</span>
+spring.datasource.url = jdbc:postgresql://localhost:5432/patrimonio
+
+<span class="comment"># Equivalente como variável de ambiente (Docker Compose)</span>
+SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/patrimonio
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ 12. TROUBLESHOOTING ══════ -->
+<div class="page" id="troubleshooting">
+  <h2 class="section-title">12. Resolução de Problemas</h2>
+
+  <table>
+    <tr><th>Problema</th><th>Causa</th><th>Solução</th></tr>
+    <tr>
+      <td>UnsupportedClassVersionError (class file version 61.0)</td>
+      <td>Maven rodando com Java 11 em vez de Java 17</td>
+      <td>Prefixar o comando com <code>JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64</code> ou configurar no <code>~/.bashrc</code></td>
+    </tr>
+    <tr>
+      <td>Port 8080 already in use</td>
+      <td>Outro processo usando a porta</td>
+      <td>Identificar com <code>sudo lsof -i:8080</code> e matar, ou usar porta diferente com <code>--server.port=8082</code></td>
+    </tr>
+    <tr>
+      <td>Connection refused (PostgreSQL)</td>
+      <td>PostgreSQL não está rodando</td>
+      <td>Iniciar com <code>sudo systemctl start postgresql</code> ou usar <code>docker compose up db</code></td>
+    </tr>
+    <tr>
+      <td>FATAL: database "patrimonio" does not exist</td>
+      <td>Banco não criado</td>
+      <td>Criar com <code>createdb -U postgres patrimonio</code> ou deixar o Docker criar automaticamente</td>
+    </tr>
+    <tr>
+      <td>401 em todas as requisições</td>
+      <td>Sessão expirada ou não autenticado</td>
+      <td>Fazer login novamente em <code>POST /api/auth/login</code></td>
+    </tr>
+    <tr>
+      <td>403 Forbidden</td>
+      <td>Usuário OPERADOR acessando rota de ADMIN</td>
+      <td>Usar conta com perfil ADMIN para /api/usuarios/** e /api/relatorios/**</td>
+    </tr>
+    <tr>
+      <td>Docker: image not rebuilding</td>
+      <td>Cache do Docker</td>
+      <td>Forçar rebuild com <code>docker compose build --no-cache</code></td>
+    </tr>
+    <tr>
+      <td>E-mail de reset não chega</td>
+      <td>App Password do Gmail inválida ou SMTP bloqueado</td>
+      <td>Gerar nova App Password em Conta Google → Segurança → Senhas de app</td>
+    </tr>
+  </table>
+
+  <div class="alert alert-success">
+    <strong>Java 17 instalado mas não reconhecido pelo Maven?</strong><br>
+    Verifique quais versões estão disponíveis: <code>update-java-alternatives -l</code><br>
+    Use sempre o prefixo <code>JAVA_HOME=...</code> ou troque o Java padrão do sistema:
+    <code>sudo update-alternatives --config java</code>
+  </div>
+
+  <br>
+  <div style="text-align:center; padding: 30px; color: #888; border-top: 2px solid #eee; margin-top: 40px;">
+    <strong>Sistema Patrimonial v1.0.0</strong><br>
+    Documentação gerada em Junho / 2026<br>
+    Spring Boot 3.2.3 · Java 17 · PostgreSQL 16
+  </div>
+</div>
+
+</body>
+</html>

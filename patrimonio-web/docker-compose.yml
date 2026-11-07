@@ -1,0 +1,41 @@
+services:
+
+  db:
+    image: postgres:16-alpine
+    container_name: patrimonio-db
+    environment:
+      POSTGRES_DB: patrimonio
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5438:5432"   # 5438 no host para não conflitar com Postgres local
+    volumes:
+      - patrimonio-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d patrimonio"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: patrimonio-app
+    ports:
+      - "8082:8080"   # acessa em http://localhost:8082
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/patrimonio
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: hussyribeiro@gmail.com
+      SPRING_MAIL_PASSWORD: esaaceytpjtvrbic
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "true"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "true"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_FROM: hussyribeiro@gmail.com
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  patrimonio-db-data:

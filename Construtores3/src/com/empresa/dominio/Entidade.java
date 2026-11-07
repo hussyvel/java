@@ -1,4 +1,11 @@
 package com.empresa.dominio;
 
-public class Entidade {
+public abstract class Entidade {
+
+    public abstract Long getId();
+
+    public interface Entidade<ID> {
+        ID getId();
+    }
+
 }
